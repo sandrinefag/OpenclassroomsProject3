@@ -20,12 +20,12 @@
 			integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer" />
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="sass/style.css" />
 	</head>
 	<body>
 		<div class="main-container">
 			<header>
-					<img class="header__logo" src="images-logo/logo/ohmyfood.png" alt="" />
+					<h1 class="header__logo">Ohmyfood</h1>
 			</header>
 
 			<aside>
@@ -38,9 +38,9 @@
 						placeholder="Paris, Belleville" />
 				</form>
 				<section class="aside__container">
-						<h1 class="aside__title">
+						<h2 class="aside__title">
 							Réservez le menu qui vous convient
-						</h1>
+						</h2>
 						<p class="aside__txt">
 							Découvrez des restaurants d'exception, sélectionnés par nos soins.
 						</p>
@@ -50,29 +50,29 @@
 
 			<main>
 				<div class="fonctionnement-and-restaurants">
-					<section class="Fonctionnement-section">
-						<h2>Fonctionnement</h2>
-						<div class="info-stepOrder">
-							<div>
-								<p>1</p>
-								<i class="fa-solid fa-mobile-screen"></i>
-								<p>Choisissez un restaurant</p>
+					<section class="sectionFonctionnement">
+						<h3 class="sectionFonctionnement__title">Fonctionnement</h3>
+						<div class="sectionFonctionnement__container">
+							<div class="sectionFonctionnement__stepOrder">
+								<p class="sectionFonctionnement__number">1</p>
+								<i class="fa-solid fa-mobile-screen sectionFonctionnement__icons"></i>
+								<p class="sectionFonctionnement__txt">Choisissez un restaurant</p>
 							</div>
-							<div>
-								<p>2</p>
-								<i class="fa-solid fa-list"></i>
-								<p>Composez votre menu</p>
+							<div class="sectionFonctionnement__stepOrder">
+								<p class="sectionFonctionnement__number">2</p>
+								<i class="fa-solid fa-list sectionFonctionnement__icons"></i>
+								<p class="sectionFonctionnement__txt">Composez votre menu</p>
 							</div>
-							<div>
-								<p>3</p>
-								<i class="fa-solid fa-store"></i>
-								<p>Dégustez au restaurant</p>
+							<div class="sectionFonctionnement__stepOrder">
+								<p class="sectionFonctionnement__number">3</p>
+								<i class="fa-solid fa-store sectionFonctionnement__icons sectionFonctionnement__icons--purple"></i>
+								<p class="sectionFonctionnement__txt">Dégustez au restaurant</p>
 							</div>
 						</div>
 					</section>
 
 					<section class="resto-section"></section>
-					<h2>restaurants</h2>
+					<h3>restaurants</h3>
 					<div class="restos-container">
 						<article class="menilmontant-resto">
 							<img
@@ -80,7 +80,7 @@
 								alt="" />
 							<div class="card-content">
 								<div class="card-txt">
-									<h3 class="card-title">La palette du goût</h3>
+									<h4 class="card-title">La palette du goût</h4>
 									<p class="card-subtitle">Ménilmontant</p>
 								</div>
 								<i class="fa-regular fa-heart card-heart"></i>
@@ -93,7 +93,7 @@
 								alt="" />
 							<div class="card-content">
 								<div class="card-txt">
-									<h3 class="card-title">La note enchantée</h3>
+									<h4 class="card-title">La note enchantée</h4>
 									<p class="card-subtitle">Charonne</p>
 								</div>
 								<i class="fa-regular fa-heart card-heart"></i>
@@ -106,7 +106,7 @@
 								alt="" />
 							<div class="card-content">
 								<div class="card-txt">
-									<h3 class="card-title">A la française</h3>
+									<h4 class="card-title">A la française</h4>
 									<p class="card-subtitle">Cité Rouge</p>
 								</div>
 								<i class="fa-regular fa-heart card-heart"></i>
@@ -119,7 +119,7 @@
 								alt="" />
 							<div class="card-content">
 								<div class="card-txt">
-									<h3 class="card-title">Le délice des sens</h3>
+									<h4 class="card-title">Le délice des sens</h4>
 									<p class="card-subtitle">Folie-Méricourt</p>
 								</div>
 								<i class="fa-regular fa-heart card-heart"></i>
@@ -130,7 +130,7 @@
 			</main>
 
 			<footer>
-				<h3 class="logo-footer">Ohmyfood</h3>
+				<h4 class="logo-footer">Ohmyfood</h4>
 				<div>
 					<a href="">
 						<i class="fa-solid fa-utensils"></i>
