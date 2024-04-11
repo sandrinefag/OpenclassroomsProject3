@@ -2,25 +2,25 @@
 * {
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
-}
-
-/*************colors***************/
-body {
   margin: 0;
 }
 
-header {
+/***********polices***************/
+/*************colors***************/
+body header {
   display: flex;
   justify-content: center;
   margin-bottom: 4px;
+  height: 63px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
 }
-header .header__logo {
-  width: 50%;
+body header .header__logo {
+  width: 60%;
   margin-top: 14px;
+  font-family: "shrikhand", sans-serif;
+  font-style: italic;
 }
-
-aside .aside__localisationContainer {
+body aside .aside__localisationContainer {
   background-color: #EAEAEA;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -28,41 +28,41 @@ aside .aside__localisationContainer {
   padding-left: 90px;
   height: 50px;
 }
-aside .aside__icon {
+body aside .aside__icon {
   margin-top: 15px;
   align-items: center;
 }
-aside .aside__inputField::-moz-placeholder {
+body aside .aside__inputField::-moz-placeholder {
   color: black;
   font-size: 16px;
   font-weight: 500;
 }
-aside .aside__inputField::placeholder {
+body aside .aside__inputField::placeholder {
   color: black;
   font-size: 16px;
   font-weight: 500;
 }
-aside .aside__inputField:-moz-placeholder-shown {
+body aside .aside__inputField:-moz-placeholder-shown {
   background-color: #EAEAEA;
   border: #EAEAEA solid 1px;
 }
-aside .aside__inputField:placeholder-shown {
+body aside .aside__inputField:placeholder-shown {
   background-color: #EAEAEA;
   border: #EAEAEA solid 1px;
 }
-aside .aside__container {
+body aside .aside__container {
   background-color: #f3f3f3;
   margin-top: 5px;
   height: 250px;
 }
-aside .aside__container .aside__title {
+body aside .aside__container .aside__title {
   width: 73%;
   font-size: 24px;
   text-align: center;
   padding-top: 25px;
   margin: auto;
 }
-aside .aside__container .aside__txt {
+body aside .aside__container .aside__txt {
   width: 89%;
   font-size: 16px;
   font-weight: 300;
@@ -70,10 +70,10 @@ aside .aside__container .aside__txt {
   margin: auto;
   margin-top: 10px;
 }
-aside .aside__container .aside__link {
+body aside .aside__container .aside__link {
   width: 218px;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 25px;
   padding-top: 14px;
   border: solid pink 1px;
   text-align: center;
@@ -83,42 +83,127 @@ aside .aside__container .aside__link {
   height: 50px;
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 }
-
-.sectionFonctionnement {
+body .sectionFonctionnement {
   margin-left: 20px;
+  padding-top: 40px;
 }
-.sectionFonctionnement .sectionFonctionnement__title {
+body .sectionFonctionnement .sectionFonctionnement__title {
   font-size: 24px;
 }
-.sectionFonctionnement .sectionFonctionnement__container .sectionFonctionnement__stepOrder {
+body .sectionFonctionnement .sectionFonctionnement__container {
+  width: 89%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+body .sectionFonctionnement .sectionFonctionnement__container .sectionFonctionnement__stepOrder {
   display: flex;
   background-color: #f6f6f6;
   margin-top: 20px;
   border-radius: 20px;
-  width: 92%;
+  width: 96%;
+  height: 70px;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
-.sectionFonctionnement .sectionFonctionnement__container .sectionFonctionnement__stepOrder .sectionFonctionnement__number {
+body .sectionFonctionnement .sectionFonctionnement__container .sectionFonctionnement__stepOrder .sectionFonctionnement__number {
   background-color: #9356DC;
-  border: solid 1px #9356DC;
   border-radius: 20px;
   width: 20px;
   color: #ffffff;
   text-align: center;
   margin-left: -9px;
+  padding-top: 3px;
+  height: 22px;
+  position: relative;
+  top: 25px;
+  font-size: 14px;
 }
-.sectionFonctionnement .sectionFonctionnement__container .sectionFonctionnement__stepOrder .sectionFonctionnement__icons {
+body .sectionFonctionnement .sectionFonctionnement__container .sectionFonctionnement__stepOrder .sectionFonctionnement__icons {
   margin: auto;
   color: #7e7e7e;
 }
-.sectionFonctionnement .sectionFonctionnement__container .sectionFonctionnement__stepOrder .sectionFonctionnement__icons--purple {
+body .sectionFonctionnement .sectionFonctionnement__container .sectionFonctionnement__stepOrder .sectionFonctionnement__icons--purple {
   color: #9356DC;
 }
-.sectionFonctionnement .sectionFonctionnement__container .sectionFonctionnement__stepOrder .sectionFonctionnement__txt {
+body .sectionFonctionnement .sectionFonctionnement__container .sectionFonctionnement__stepOrder .sectionFonctionnement__txt {
   margin: auto;
   font-weight: 500;
-  width: 68%;
+  font-size: 16px;
   margin-left: -5px;
+}
+body .restoSection {
+  background-color: #f3f3f3;
+  margin-top: 60px;
+}
+body .restoSection .restoSection__title {
+  font-size: 24px;
+  padding-top: 30px;
+  margin-left: 20px;
+}
+body .restoSection .restoSection__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+body .restoSection .restoSection__container .restoSection__cards {
+  width: 90%;
+  background-color: #ffffff;
+  border-radius: 15px;
+}
+body .restoSection .restoSection__container .restoSection__cards .restoSection__photo {
+  width: 100%;
+  height: 140px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+body .restoSection .restoSection__container .restoSection__cards .restoSection__cardContent {
+  display: flex;
+  flex-direction: row;
+  width: 78%;
+}
+body .restoSection .restoSection__container .restoSection__cards .restoSection__cardContent .restoSection__CardTxt {
+  width: 78%;
+  line-height: 15px;
+}
+body .restoSection .restoSection__container .restoSection__cards .restoSection__cardContent .restoSection__restoName {
+  font-size: 18px;
+  margin: 10px;
+}
+body .restoSection .restoSection__container .restoSection__cards .restoSection__cardContent .restoSection__subtitle {
+  margin: 10px;
+}
+body .restoSection .restoSection__container .restoSection__cards .restoSection__cardContent .restoSection__favorite {
+  position: relative;
+  right: -80px;
+  bottom: -15px;
+}
+body footer {
+  background-color: #353535;
+  font-size: 14px;
+  padding: 22px 25px;
+}
+body footer .footer__linkContainer {
+  line-height: 30px;
+}
+body footer .footer__logo {
+  font-family: "shrikhand", sans-serif;
+  color: #ffffff;
+  font-weight: 500;
+  padding-bottom: 10px;
+  font-size: 18px;
+  font-style: italic;
+}
+body footer .footer__link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */
