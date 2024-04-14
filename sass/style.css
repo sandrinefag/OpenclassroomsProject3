@@ -7,6 +7,7 @@
 
 /***********polices***************/
 /*************colors***************/
+/*************btn*******************/
 body header {
   display: flex;
   justify-content: center;
@@ -20,7 +21,7 @@ body header .header__logo {
   font-family: "shrikhand", sans-serif;
   font-style: italic;
 }
-body aside .aside__localisationContainer {
+body aside .localisation__container {
   background-color: #EAEAEA;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -28,75 +29,73 @@ body aside .aside__localisationContainer {
   padding-left: 90px;
   height: 50px;
 }
-body aside .aside__icon {
+body aside .localisation__container .localisation__icon {
   margin-top: 15px;
   align-items: center;
 }
-body aside .aside__inputField::-moz-placeholder {
+body aside .localisation__container .localisation__input::-moz-placeholder {
   color: black;
   font-size: 16px;
   font-weight: 500;
 }
-body aside .aside__inputField::placeholder {
+body aside .localisation__container .localisation__input::placeholder {
   color: black;
   font-size: 16px;
   font-weight: 500;
 }
-body aside .aside__inputField:-moz-placeholder-shown {
+body aside .localisation__container .localisation__input:-moz-placeholder-shown {
   background-color: #EAEAEA;
   border: #EAEAEA solid 1px;
 }
-body aside .aside__inputField:placeholder-shown {
+body aside .localisation__container .localisation__input:placeholder-shown {
   background-color: #EAEAEA;
   border: #EAEAEA solid 1px;
 }
-body aside .aside__container {
+body aside .presentation__container {
   background-color: #f3f3f3;
   margin-top: 5px;
   height: 250px;
 }
-body aside .aside__container .aside__title {
+body aside .presentation__container .presentation__title {
   width: 73%;
   font-size: 24px;
   text-align: center;
   padding-top: 25px;
   margin: auto;
 }
-body aside .aside__container .aside__txt {
+body aside .presentation__container .presentation__txt {
   width: 89%;
   font-size: 16px;
   font-weight: 300;
   text-align: center;
-  margin: auto;
-  margin-top: 10px;
+  margin: 10px auto;
 }
-body aside .aside__container .aside__link {
+body aside .presentation__container .presentation__link {
   width: 218px;
-  margin: auto;
-  margin-top: 25px;
+  margin: 25px auto;
   padding-top: 14px;
-  border: solid pink 1px;
   text-align: center;
   border-radius: 25px;
   color: #ffffff;
   font-weight: 500;
   height: 50px;
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
 }
 body .sectionFonctionnement {
   margin-left: 20px;
   padding-top: 40px;
 }
-body .sectionFonctionnement .sectionFonctionnement__title {
+body .sectionFonctionnement .fonctionnement__title {
   font-size: 24px;
 }
-body .sectionFonctionnement .sectionFonctionnement__container {
+body .sectionFonctionnement .fonctionnement__container {
   width: 89%;
   display: flex;
   flex-direction: column;
   align-items: end;
 }
-body .sectionFonctionnement .sectionFonctionnement__container .sectionFonctionnement__stepOrder {
+body .sectionFonctionnement .fonctionnement__container .fonctionnement__stepOrder {
   display: flex;
   background-color: #f6f6f6;
   margin-top: 20px;
@@ -105,7 +104,7 @@ body .sectionFonctionnement .sectionFonctionnement__container .sectionFonctionne
   height: 70px;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
-body .sectionFonctionnement .sectionFonctionnement__container .sectionFonctionnement__stepOrder .sectionFonctionnement__number {
+body .sectionFonctionnement .fonctionnement__container .fonctionnement__stepOrder .fonctionnement__number {
   background-color: #9356DC;
   border-radius: 20px;
   width: 20px;
@@ -118,14 +117,14 @@ body .sectionFonctionnement .sectionFonctionnement__container .sectionFonctionne
   top: 25px;
   font-size: 14px;
 }
-body .sectionFonctionnement .sectionFonctionnement__container .sectionFonctionnement__stepOrder .sectionFonctionnement__icons {
+body .sectionFonctionnement .fonctionnement__container .fonctionnement__stepOrder .fonctionnement__icons {
   margin: auto;
   color: #7e7e7e;
 }
-body .sectionFonctionnement .sectionFonctionnement__container .sectionFonctionnement__stepOrder .sectionFonctionnement__icons--purple {
+body .sectionFonctionnement .fonctionnement__container .fonctionnement__stepOrder .fonctionnement__icons--purple {
   color: #9356DC;
 }
-body .sectionFonctionnement .sectionFonctionnement__container .sectionFonctionnement__stepOrder .sectionFonctionnement__txt {
+body .sectionFonctionnement .fonctionnement__container .fonctionnement__stepOrder .fonctionnement__txt {
   margin: auto;
   font-weight: 500;
   font-size: 16px;
@@ -135,48 +134,47 @@ body .restoSection {
   background-color: #f3f3f3;
   margin-top: 60px;
 }
-body .restoSection .restoSection__title {
+body .restoSection .resto__title {
   font-size: 24px;
   padding-top: 30px;
   margin-left: 20px;
 }
-body .restoSection .restoSection__container {
+body .restoSection .resto__container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 18px;
-  padding-top: 20px;
-  padding-bottom: 50px;
+  padding: 20px 0 50px 0;
 }
-body .restoSection .restoSection__container .restoSection__cards {
+body .restoSection .resto__container .resto__cards {
   width: 90%;
   background-color: #ffffff;
   border-radius: 15px;
 }
-body .restoSection .restoSection__container .restoSection__cards .restoSection__photo {
+body .restoSection .resto__container .resto__cards .resto__photo {
   width: 100%;
   height: 140px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 15px 15px 0 0;
 }
-body .restoSection .restoSection__container .restoSection__cards .restoSection__cardContent {
+body .restoSection .resto__container .resto__cards .resto__cardContent {
   display: flex;
   flex-direction: row;
   width: 78%;
 }
-body .restoSection .restoSection__container .restoSection__cards .restoSection__cardContent .restoSection__CardTxt {
+body .restoSection .resto__container .resto__cards .resto__cardContent .resto__txt {
   width: 78%;
   line-height: 15px;
 }
-body .restoSection .restoSection__container .restoSection__cards .restoSection__cardContent .restoSection__restoName {
+body .restoSection .resto__container .resto__cards .resto__cardContent .resto__name {
   font-size: 18px;
   margin: 10px;
 }
-body .restoSection .restoSection__container .restoSection__cards .restoSection__cardContent .restoSection__subtitle {
+body .restoSection .resto__container .resto__cards .resto__cardContent .resto__subtitle {
   margin: 10px;
 }
-body .restoSection .restoSection__container .restoSection__cards .restoSection__cardContent .restoSection__favorite {
+body .restoSection .resto__container .resto__cards .resto__cardContent .resto__icon {
   position: relative;
   right: -80px;
   bottom: -15px;
@@ -186,9 +184,6 @@ body footer {
   font-size: 14px;
   padding: 22px 25px;
 }
-body footer .footer__linkContainer {
-  line-height: 30px;
-}
 body footer .footer__logo {
   font-family: "shrikhand", sans-serif;
   color: #ffffff;
@@ -197,7 +192,10 @@ body footer .footer__logo {
   font-size: 18px;
   font-style: italic;
 }
-body footer .footer__link {
+body footer .footer__linkContainer {
+  line-height: 30px;
+}
+body footer .footer__linkContainer .footer__link {
   display: flex;
   align-items: center;
   gap: 12px;
