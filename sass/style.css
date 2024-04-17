@@ -3,35 +3,39 @@
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
   margin: 0;
+  text-decoration: none;
+}
+* a {
+  color: inherit;
 }
 
 /***********polices***************/
 /*************colors***************/
+/**********shadow*********************/
 /*************btn*******************/
 body header {
   display: flex;
   justify-content: center;
-  margin-bottom: 4px;
+  margin-bottom: 3px;
   height: 63px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
 }
 body header .header__logo {
   width: 60%;
-  margin-top: 14px;
+  margin: auto;
+  text-align: center;
   font-family: "shrikhand", sans-serif;
   font-style: italic;
 }
 body aside .localisation__container {
   background-color: #EAEAEA;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
-  display: flex;
-  gap: 10px;
-  padding-left: 90px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  text-align: center;
+  padding-left: 50px;
   height: 50px;
 }
 body aside .localisation__container .localisation__icon {
   margin-top: 15px;
-  align-items: center;
 }
 body aside .localisation__container .localisation__input::-moz-placeholder {
   color: black;
@@ -46,10 +50,12 @@ body aside .localisation__container .localisation__input::placeholder {
 body aside .localisation__container .localisation__input:-moz-placeholder-shown {
   background-color: #EAEAEA;
   border: #EAEAEA solid 1px;
+  padding-left: 5px;
 }
 body aside .localisation__container .localisation__input:placeholder-shown {
   background-color: #EAEAEA;
   border: #EAEAEA solid 1px;
+  padding-left: 5px;
 }
 body aside .presentation__container {
   background-color: #f3f3f3;
@@ -80,7 +86,10 @@ body aside .presentation__container .presentation__link {
   font-weight: 500;
   height: 50px;
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+}
+body aside .presentation__container .presentation__link .presentation__link--color {
+  color: #ffffff;
 }
 body .sectionFonctionnement {
   margin-left: 20px;
@@ -147,9 +156,11 @@ body .restoSection .resto__container {
   padding: 20px 0 50px 0;
 }
 body .restoSection .resto__container .resto__cards {
+  position: relative;
   width: 90%;
   background-color: #ffffff;
   border-radius: 15px;
+  height: 210px;
 }
 body .restoSection .resto__container .resto__cards .resto__photo {
   width: 100%;
@@ -157,6 +168,21 @@ body .restoSection .resto__container .resto__cards .resto__photo {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 15px 15px 0 0;
+}
+body .restoSection .resto__container .resto__cards .resto_badge {
+  position: absolute;
+  top: 5%;
+  left: 73%;
+  background-color: #99E2D0;
+  color: #008766;
+  border-radius: 2px;
+  width: 23%;
+  height: 25px;
+  font-size: 12px;
+  text-align: center;
+  font-weight: 500;
+  padding-top: 5px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
 }
 body .restoSection .resto__container .resto__cards .resto__cardContent {
   display: flex;
@@ -166,6 +192,7 @@ body .restoSection .resto__container .resto__cards .resto__cardContent {
 body .restoSection .resto__container .resto__cards .resto__cardContent .resto__txt {
   width: 78%;
   line-height: 15px;
+  padding-top: 2px;
 }
 body .restoSection .resto__container .resto__cards .resto__cardContent .resto__name {
   font-size: 18px;
@@ -174,10 +201,17 @@ body .restoSection .resto__container .resto__cards .resto__cardContent .resto__n
 body .restoSection .resto__container .resto__cards .resto__cardContent .resto__subtitle {
   margin: 10px;
 }
-body .restoSection .resto__container .resto__cards .resto__cardContent .resto__icon {
-  position: relative;
-  right: -80px;
-  bottom: -15px;
+body .restoSection .resto__container .resto__cards .heart__container {
+  position: absolute;
+  left: 87%;
+  bottom: 12%;
+}
+body .restoSection .resto__container .resto__cards .heart__container .heart__empty {
+  font-size: 1.3rem;
+}
+body .restoSection .resto__container .resto__cards .heart__container .heart__full {
+  font-size: 1.3rem;
+  display: none;
 }
 body footer {
   background-color: #353535;
@@ -200,7 +234,6 @@ body footer .footer__linkContainer .footer__link {
   align-items: center;
   gap: 12px;
   color: #ffffff;
-  text-decoration: none;
   font-size: 15px;
 }
 

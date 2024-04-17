@@ -1,1 +1,134 @@
-/*# sourceMappingURL=palette-gout.css.map */
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body .main-container {
+  background-color: #f6f6f6;
+}
+body .main-container header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4px;
+  height: 63px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+  background-color: #ffffff;
+}
+body .main-container header .header__logo {
+  width: 60%;
+  margin-top: 14px;
+  font-family: "shrikhand", sans-serif;
+  font-style: italic;
+}
+body .main-container .resto__photo {
+  width: 100%;
+}
+body .main-container .menu__container {
+  background-color: #f6f6f6;
+  border-radius: 40px;
+  position: relative;
+  top: -45px;
+}
+body .main-container .menu__container .menu__header {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  padding: 30px 0 20px 4px;
+}
+body .main-container .menu__container .menu__header .menu__title {
+  font-size: 26px;
+  font-family: "shrikhand", sans-serif;
+  font-weight: 400;
+}
+body .main-container .menu__container .menu__header .resto__icon {
+  font-size: 22px;
+  padding-top: 7px;
+  margin-right: -20px;
+}
+body .main-container .menu__container form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+body .main-container .menu__container form .dishes__section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 93%;
+  margin: auto;
+}
+body .main-container .menu__container form .dishes__section .dishes__step {
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: -6px;
+}
+body .main-container .menu__container form .dishes__section .title__line {
+  border-bottom: #99E2D0 solid 3px;
+  width: 12%;
+}
+body .main-container .menu__container form .dishes__section .dishes__container {
+  background-color: #ffffff;
+  border-radius: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+body .main-container .menu__container form .dishes__section .dishes__container:hover {
+  background-color: pink;
+}
+body .main-container .menu__container form .dishes__section .dishes__container .dishes__txt {
+  width: 82%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+body .main-container .menu__container form .dishes__section .dishes__container .dishes__txt .dishes__title {
+  font-size: 16px;
+  font-weight: 500;
+}
+body .main-container .menu__container form .dishes__section .dishes__container .dishes__txt .dishes__subtitle {
+  font-size: 14px;
+}
+body .main-container .menu__container form .dishes__section .dishes__container .dishes__price {
+  padding-top: 8px;
+  font-size: 15px;
+  font-weight: 700;
+}
+body .main-container .menu__container form .btn-order {
+  text-align: center;
+  border-radius: 25px;
+  color: #ffffff;
+  font-weight: 500;
+  height: 50px;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+  width: 49%;
+  margin: auto;
+  border: none;
+}
+body .main-container footer {
+  background-color: #353535;
+  font-size: 14px;
+  padding: 22px 25px;
+}
+body .main-container footer .footer__logo {
+  font-family: "shrikhand", sans-serif;
+  color: #ffffff;
+  font-weight: 500;
+  padding-bottom: 10px;
+  font-size: 18px;
+  font-style: italic;
+}
+body .main-container footer .footer__linkContainer {
+  line-height: 30px;
+}
+body .main-container footer .footer__linkContainer .footer__link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+}/*# sourceMappingURL=palette-gout.css.map */

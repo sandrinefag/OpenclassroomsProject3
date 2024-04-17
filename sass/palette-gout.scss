@@ -1,0 +1,173 @@
+*{
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+$logo-police: "shrikhand", sans-serif;
+
+$bg-light-green:#99E2D0;
+$bg-light-grey:#f6f6f6;
+$color-dark-green: #008766;
+$color-white:#ffffff;
+
+@mixin btn{
+  text-align: center;
+  border-radius: 25px;
+  color: $color-white;
+  font-weight: 500;
+  height: 50px;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%); 
+  box-shadow: $btn-shadow;
+}
+
+$btn-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+$header-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+$aside-shadow: 0 4px 4px 0 rgba(0, 0, 0,0.25);
+$stepAndDishes-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+
+body{
+
+    .main-container{
+      background-color: $bg-light-grey;
+    
+    header{
+      display: flex;
+      justify-content: center;
+      margin-bottom: 4px;
+      height: 63px;
+      box-shadow: $btn-shadow;
+      background-color: $color-white;
+
+      .header__logo{
+        width: 60%;
+        margin-top: 14px;
+        font-family: $logo-police;
+        font-style: italic;
+      }
+    }
+
+    .resto__photo{
+      width: 100%;
+    }
+
+    .menu__container{
+      background-color: #f6f6f6;
+      border-radius: 40px;
+      position: relative;
+      top: -45px;
+
+      .menu__header{
+        display: flex;
+        justify-content: space-around;
+        width: 90%;
+        padding: 30px 0 20px 4px;
+        
+        .menu__title{
+          font-size: 26px;
+          font-family: $logo-police;
+          font-weight: 400;
+        }
+
+        .resto__icon{
+          font-size: 22px;
+          padding-top: 7px;
+          margin-right: -20px;
+        }
+      
+      }
+
+      form{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        .dishes__section{
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          width: 93%;
+          margin: auto;
+
+          .dishes__step{
+            font-size: 18px;
+            font-weight: 300;
+            margin-bottom: -6px;
+          }
+
+          .title__line{
+            border-bottom: $bg-light-green solid 3px;
+            width: 12%;
+          }
+
+          .dishes__container{
+            background-color: $color-white;
+            border-radius: 15px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+
+            &:hover{
+              background-color: pink;
+            }
+            .dishes__txt{
+              width: 82%;
+              display: flex;
+              flex-direction: column;
+              gap: 5px;
+
+              .dishes__title{
+                    font-size: 16px;
+                    font-weight: 500;
+                  }
+                  .dishes__subtitle{
+                    font-size: 14px;
+                  }
+            }
+              .dishes__price{
+                      padding-top: 8px;
+                      font-size: 15px;
+                      font-weight: 700;
+                    }
+                
+          }
+        }
+        .btn-order{
+          @include btn;
+          width: 49%;
+          margin: auto;
+          border: none;
+        }
+      }
+    }
+
+    footer{
+      background-color: #353535;
+      font-size: 14px;
+      padding: 22px 25px;
+
+      .footer__logo{
+              font-family: $logo-police;
+              color: #ffffff;
+              font-weight:500;
+              padding-bottom: 10px;
+              font-size: 18px;
+              font-style: italic;
+            }
+      .footer__linkContainer{
+        line-height: 30px;
+      
+        
+        .footer__link{
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          color: #ffffff;
+          text-decoration: none;
+          font-size: 15px;
+        }
+      }  
+    }
+  }  
+}

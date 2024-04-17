@@ -4,6 +4,11 @@
     font-family: "Roboto", sans-serif;
     box-sizing: border-box;
     margin: 0;
+    text-decoration: none;
+
+    a{
+      color: inherit;
+    }
 
 }
 
@@ -14,7 +19,13 @@ $bg-light-green:#99E2D0;
 $bg-light-grey:#f6f6f6;
 $color-dark-green: #008766;
 $color-white:#ffffff;
+$gradient-color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%); 
 
+/**********shadow*********************/
+$btn-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+$header-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+$aside-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25) ;
+$stepDishes-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 /*************btn*******************/
 @mixin btn{
   text-align: center;
@@ -23,26 +34,25 @@ $color-white:#ffffff;
   font-weight: 500;
   height: 50px;
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%); 
-  @include headerAndAside-shadow;
+  box-shadow:$btn-shadow;
 }
 
 
-@mixin headerAndAside-shadow{
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.20);
-}
+
 
 body{
 
   header{
     display: flex;
     justify-content: center;
-    margin-bottom: 4px;
+    margin-bottom: 3px;
     height: 63px;
-    @include headerAndAside-shadow;
+    box-shadow: $header-shadow;
 
       .header__logo{
         width: 60%;
-        margin-top: 14px;
+        margin: auto;
+        text-align: center;
         font-family: $logo-police;
         font-style: italic;
       }
@@ -51,15 +61,14 @@ body{
   aside{
       .localisation__container{
           background-color:#EAEAEA;
-          @include headerAndAside-shadow;
-          display: flex;
-          gap: 10px;
-          padding-left: 90px;
+          box-shadow: $aside-shadow;
+          text-align: center;
+          padding-left: 50px;
           height: 50px;
       
           .localisation__icon{
             margin-top: 15px;
-            align-items: center;
+          
           }    
       
       .localisation__input::placeholder{
@@ -70,6 +79,7 @@ body{
       .localisation__input:placeholder-shown{
           background-color: #EAEAEA;
           border: #EAEAEA solid 1px;  
+          padding-left: 5px;
         }
       }
 
@@ -99,6 +109,10 @@ body{
               margin: 25px auto;
               padding-top: 14px;
               @include btn; 
+
+              .presentation__link--color{
+                color: $color-white;
+              }
           }  
       }
     }
@@ -123,7 +137,7 @@ body{
           border-radius: 20px;
           width: 96%;
           height: 70px;
-          box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: $stepDishes-shadow;
 
           .fonctionnement__number{
             background-color: #9356DC;
@@ -178,15 +192,33 @@ body{
       
     
       .resto__cards{
+        position: relative;
         width: 90%;
         background-color: #ffffff;
         border-radius: 15px;
+        height: 210px;
         
         .resto__photo{
           width: 100%;
           height: 140px;
           object-fit: cover;
           border-radius: 15px 15px 0 0;
+        }
+        .resto_badge{
+          position: absolute;
+          top: 5%;
+          left: 73%;
+          background-color:$bg-light-green;
+          color: $color-dark-green;
+          border-radius: 2px;
+          width: 23%;
+          height: 25px;
+          font-size: 12px;
+          text-align: center;
+          font-weight: 500 ;
+          padding-top: 5px;
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+
         }
 
         .resto__cardContent{
@@ -197,22 +229,42 @@ body{
           .resto__txt{
             width: 78%;
             line-height: 15px;
+            padding-top: 2px;
           }  
 
             .resto__name{
-            font-size: 18px;
-            margin: 10px;
+              font-size: 18px;
+              margin: 10px;
           }
 
             .resto__subtitle{
-            margin: 10px;
+              margin: 10px;
           }
 
-          .resto__icon{
-            position: relative;
-            right: -80px;
-            bottom: -15px;
+        }  
+
+        .heart__container{
+          position: absolute;
+          left: 87%;
+          bottom: 12%;
+
+          .heart__empty{
+            font-size: 1.3rem;
+             
+           
           }
+          // .heart__empty:hover{
+           
+          
+          // }
+
+          .heart__full{
+          font-size: 1.3rem;
+          display: none;
+          
+          }
+
+          
         }
       }
     }
@@ -240,7 +292,6 @@ body{
         align-items: center;
         gap: 12px;
         color: #ffffff;
-        text-decoration: none;
         font-size: 15px;
       }
     }  
