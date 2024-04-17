@@ -22,10 +22,10 @@ body header {
 }
 body header .header__logo {
   width: 60%;
+  font-size: 30px;
   margin: auto;
   text-align: center;
   font-family: "shrikhand", sans-serif;
-  font-style: italic;
 }
 body aside .localisation__container {
   background-color: #EAEAEA;
