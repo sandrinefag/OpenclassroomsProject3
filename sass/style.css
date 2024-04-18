@@ -62,6 +62,16 @@ body aside .presentation__container {
   margin-top: 5px;
   height: 250px;
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  body aside .presentation__container {
+    height: 190px;
+  }
+}
+@media (min-width: 1025px) {
+  body aside .presentation__container {
+    height: 228px;
+  }
+}
 body aside .presentation__container .presentation__title {
   width: 73%;
   font-size: 24px;
@@ -69,12 +79,22 @@ body aside .presentation__container .presentation__title {
   padding-top: 25px;
   margin: auto;
 }
+@media (min-width: 1025px) {
+  body aside .presentation__container .presentation__title {
+    font-size: 40px;
+  }
+}
 body aside .presentation__container .presentation__txt {
   width: 89%;
   font-size: 16px;
   font-weight: 300;
   text-align: center;
   margin: 10px auto;
+}
+@media (min-width: 1025px) {
+  body aside .presentation__container .presentation__txt {
+    font-size: 18px;
+  }
 }
 body aside .presentation__container .presentation__link {
   width: 218px;
@@ -95,14 +115,47 @@ body .sectionFonctionnement {
   margin-left: 20px;
   padding-top: 40px;
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .sectionFonctionnement {
+    margin: auto;
+    width: 94%;
+  }
+}
+@media (min-width: 1025px) {
+  body .sectionFonctionnement {
+    padding: 50px 100px 50px 100px;
+    margin: 0;
+  }
+}
 body .sectionFonctionnement .fonctionnement__title {
   font-size: 24px;
 }
+@media (min-width: 1025px) {
+  body .sectionFonctionnement .fonctionnement__title {
+    margin-left: 59px;
+    padding-bottom: 10px;
+  }
+}
 body .sectionFonctionnement .fonctionnement__container {
-  width: 89%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: end;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .sectionFonctionnement .fonctionnement__container {
+    gap: 30px;
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media (min-width: 1025px) {
+  body .sectionFonctionnement .fonctionnement__container {
+    width: 89%;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    gap: 30px;
+  }
 }
 body .sectionFonctionnement .fonctionnement__container .fonctionnement__stepOrder {
   display: flex;
@@ -112,6 +165,17 @@ body .sectionFonctionnement .fonctionnement__container .fonctionnement__stepOrde
   width: 96%;
   height: 70px;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .sectionFonctionnement .fonctionnement__container .fonctionnement__stepOrder {
+    width: 50%;
+  }
+}
+@media (min-width: 1025px) {
+  body .sectionFonctionnement .fonctionnement__container .fonctionnement__stepOrder {
+    width: 35%;
+    gap: 20px;
+  }
 }
 body .sectionFonctionnement .fonctionnement__container .fonctionnement__stepOrder .fonctionnement__number {
   background-color: #9356DC;
@@ -130,6 +194,11 @@ body .sectionFonctionnement .fonctionnement__container .fonctionnement__stepOrde
   margin: auto;
   color: #7e7e7e;
 }
+@media (min-width: 1025px) {
+  body .sectionFonctionnement .fonctionnement__container .fonctionnement__stepOrder .fonctionnement__icons {
+    margin: 25px 5px;
+  }
+}
 body .sectionFonctionnement .fonctionnement__container .fonctionnement__stepOrder .fonctionnement__icons--purple {
   color: #9356DC;
 }
@@ -139,21 +208,60 @@ body .sectionFonctionnement .fonctionnement__container .fonctionnement__stepOrde
   font-size: 16px;
   margin-left: -5px;
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .sectionFonctionnement .fonctionnement__container .fonctionnement__stepOrder .fonctionnement__txt {
+    font-size: 14px;
+  }
+}
 body .restoSection {
   background-color: #f3f3f3;
   margin-top: 60px;
+}
+@media (min-width: 1025px) {
+  body .restoSection {
+    padding: 30px 170px 20px 170px;
+    margin: auto;
+  }
 }
 body .restoSection .resto__title {
   font-size: 24px;
   padding-top: 30px;
   margin-left: 20px;
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .restoSection .resto__title {
+    margin-left: 25px;
+  }
+}
+@media (min-width: 1025px) {
+  body .restoSection .resto__title {
+    padding: 0;
+    margin-left: 0;
+  }
+}
 body .restoSection .resto__container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 18px;
-  padding: 20px 0 50px 0;
+  padding: 20px 0;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .restoSection .resto__container {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 30px;
+  }
+}
+@media (min-width: 1025px) {
+  body .restoSection .resto__container {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
 }
 body .restoSection .resto__container .resto__cards {
   position: relative;
@@ -161,6 +269,17 @@ body .restoSection .resto__container .resto__cards {
   background-color: #ffffff;
   border-radius: 15px;
   height: 210px;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .restoSection .resto__container .resto__cards {
+    width: 43%;
+  }
+}
+@media (min-width: 1025px) {
+  body .restoSection .resto__container .resto__cards {
+    width: 45%;
+    height: 214px;
+  }
 }
 body .restoSection .resto__container .resto__cards .resto__photo {
   width: 100%;
@@ -184,6 +303,11 @@ body .restoSection .resto__container .resto__cards .resto_badge {
   padding-top: 5px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
 }
+@media (min-width: 1025px) {
+  body .restoSection .resto__container .resto__cards .resto_badge {
+    font-size: 14px;
+  }
+}
 body .restoSection .resto__container .resto__cards .resto__cardContent {
   display: flex;
   flex-direction: row;
@@ -200,6 +324,12 @@ body .restoSection .resto__container .resto__cards .resto__cardContent .resto__n
 }
 body .restoSection .resto__container .resto__cards .resto__cardContent .resto__subtitle {
   margin: 10px;
+}
+@media (min-width: 1025px) {
+  body .restoSection .resto__container .resto__cards .resto__cardContent .resto__subtitle {
+    font-size: 18px;
+    font-weight: 300;
+  }
 }
 body .restoSection .resto__container .resto__cards .heart__container {
   position: absolute;
@@ -218,16 +348,78 @@ body footer {
   font-size: 14px;
   padding: 22px 25px;
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  body footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: end;
+    height: 100px;
+  }
+}
+@media (min-width: 1025px) {
+  body footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: end;
+    gap: 60px;
+  }
+}
 body footer .footer__logo {
   font-family: "shrikhand", sans-serif;
   color: #ffffff;
   font-weight: 500;
   padding-bottom: 10px;
   font-size: 18px;
-  font-style: italic;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body footer .footer__logo {
+    padding-bottom: 0;
+  }
+}
+@media (min-width: 1025px) {
+  body footer .footer__logo {
+    padding: 0;
+  }
 }
 body footer .footer__linkContainer {
   line-height: 30px;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body footer .footer__linkContainer {
+    display: flex;
+    width: 73%;
+    gap: 15px;
+  }
+}
+@media (min-width: 1025px) {
+  body footer .footer__linkContainer {
+    display: flex;
+    gap: 50px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body footer .footer__linkContainer .footer__1stPart {
+    display: flex;
+    gap: 15px;
+  }
+}
+@media (min-width: 1025px) {
+  body footer .footer__linkContainer .footer__1stPart {
+    display: flex;
+    gap: 15px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body footer .footer__linkContainer .footer__2ndPart {
+    display: flex;
+    gap: 15px;
+  }
+}
+@media (min-width: 1025px) {
+  body footer .footer__linkContainer .footer__2ndPart {
+    display: flex;
+    gap: 15px;
+  }
 }
 body footer .footer__linkContainer .footer__link {
   display: flex;
@@ -235,6 +427,17 @@ body footer .footer__linkContainer .footer__link {
   gap: 12px;
   color: #ffffff;
   font-size: 15px;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body footer .footer__linkContainer .footer__link {
+    font-size: 14px;
+    gap: 7px;
+  }
+}
+@media (min-width: 1025px) {
+  body footer .footer__linkContainer .footer__link {
+    gap: 10px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

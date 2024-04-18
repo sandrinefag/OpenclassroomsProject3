@@ -88,12 +88,29 @@ body{
           margin-top: 5px;
           height: 250px;  
 
+          @media (min-width:768px) and (max-width:1024px){
+            height: 190px;
+          }
+
+          @media (min-width:1025px){
+            height: 228px;
+
+          }
+
+         
           .presentation__title{
               width: 73%;
               font-size: 24px;
               text-align: center;
               padding-top: 25px;
               margin: auto; 
+
+              
+          @media (min-width:1025px){
+            font-size: 40px;
+
+          }
+
           }
 
           .presentation__txt{
@@ -102,6 +119,11 @@ body{
               font-weight: 300;
               text-align: center;
               margin: 10px auto;
+
+              @media (min-width:1025px){
+                font-size: 18px;
+    
+              }
           }
 
           .presentation__link{
@@ -121,15 +143,50 @@ body{
       margin-left: 20px;
       padding-top: 40px;
  
+      @media (min-width:768px) and (max-width:1024px){
+        margin:auto;
+        width: 94%;
+      } 
+
+       @media (min-width:1025px){
+            padding: 50px 100px 50px 100px;
+            margin: 0;
+
+          }
+      
       .fonctionnement__title{
           font-size: 24px;  
+
+          @media (min-width:1025px){
+              margin-left: 59px;
+              padding-bottom: 10px;
+       
       }
 
+      }
+
+      
+
       .fonctionnement__container{
-        width: 89%;
+        width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: end;
+
+        @media (min-width:768px) and (max-width:1024px){
+          gap: 30px;
+          display: flex;
+          flex-direction: row;
+         
+        } 
+
+        @media (min-width:1025px){
+          width: 89%;;
+          display: flex;
+          flex-direction: row; 
+          margin: auto;
+          gap: 30px;
+
+        }
         .fonctionnement__stepOrder{
           display: flex;
           background-color: #f6f6f6;
@@ -138,6 +195,16 @@ body{
           width: 96%;
           height: 70px;
           box-shadow: $stepDishes-shadow;
+
+          @media (min-width:768px) and (max-width:1024px){
+            width: 50%;
+          }
+
+          @media (min-width:1025px){
+            width: 35%;
+            gap: 20px;
+
+          }
 
           .fonctionnement__number{
             background-color: #9356DC;
@@ -156,7 +223,13 @@ body{
           .fonctionnement__icons{
             margin: auto;
             color: #7e7e7e;
+
+             @media (min-width:1025px){
+                margin: 25px 5px;
+    
+              }
           }
+
 
             .fonctionnement__icons--purple{
               color: #9356DC;
@@ -167,6 +240,10 @@ body{
             font-weight: 500;
             font-size: 16px;
             margin-left: -5px;
+
+            @media (min-width:768px) and (max-width:1024px){
+              font-size: 14px;
+            }
           }
         }
       }
@@ -175,11 +252,25 @@ body{
   .restoSection{
     background-color:#f3f3f3 ;
     margin-top: 60px;
+    @media (min-width:1025px){
+      padding: 30px 170px 20px 170px;
+      margin: auto;
+
+    }
 
     .resto__title{
       font-size: 24px;
       padding-top: 30px;
       margin-left: 20px;
+
+      @media (min-width:768px) and (max-width:1024px){
+        margin-left: 25px;;
+      }
+
+      @media (min-width:1025px){
+        padding: 0;
+        margin-left: 0;
+      }
     
     }
 
@@ -188,15 +279,41 @@ body{
       flex-direction: column;
       align-items: center;
       gap: 18px;
-      padding:20px 0 50px 0;
-      
-    
+      padding:20px 0;
+
+      @media (min-width:768px) and (max-width:1024px){
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 30px;
+      }
+
+      @media (min-width:1025px){
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 50px;
+     
+      }
+
       .resto__cards{
         position: relative;
         width: 90%;
         background-color: #ffffff;
         border-radius: 15px;
         height: 210px;
+
+        @media (min-width:768px) and (max-width:1024px){
+          width: 43%;
+        }
+
+        @media (min-width:1025px){
+          width: 45%;
+          height: 214px;
+        }
+
+        
         
         .resto__photo{
           width: 100%;
@@ -219,6 +336,9 @@ body{
           padding-top: 5px;
           box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
 
+          @media (min-width:1025px){
+          font-size: 14px;
+          }
         }
 
         .resto__cardContent{
@@ -239,8 +359,13 @@ body{
 
             .resto__subtitle{
               margin: 10px;
-          }
 
+              @media (min-width:1025px){
+               font-size: 18px;
+               font-weight: 300;
+    
+              }
+            }
         }  
 
         .heart__container{
@@ -251,12 +376,7 @@ body{
           .heart__empty{
             font-size: 1.3rem;
              
-           
           }
-          // .heart__empty:hover{
-           
-          
-          // }
 
           .heart__full{
           font-size: 1.3rem;
@@ -275,25 +395,89 @@ body{
     font-size: 14px;
     padding: 22px 25px;
 
+    @media (min-width:768px) and (max-width:1024px){
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: end;
+      height: 100px;
+    }
+
+    @media (min-width:1025px){
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: end;
+      gap: 60px;
+    }
+
     .footer__logo{
             font-family: $logo-police;
             color: #ffffff;
             font-weight:500;
             padding-bottom: 10px;
             font-size: 18px;
-            font-style: italic;
+
+            @media (min-width:768px) and (max-width:1024px){
+              padding-bottom: 0;
+              }
+
+            @media (min-width:1025px){
+             padding: 0;
+            }
           }
     .footer__linkContainer{
       line-height: 30px;
-    
-      
-      .footer__link{
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        color: #ffffff;
-        font-size: 15px;
+
+      @media (min-width:768px) and (max-width:1024px){
+      display: flex;
+      width: 73%;
+      gap: 15px;
       }
+
+      @media (min-width:1025px){
+        display: flex;
+        gap: 50px;
+      }
+
+      .footer__1stPart{
+       
+        @media (min-width:768px) and (max-width:1024px){
+           display: flex;
+            gap: 15px;
+          }
+      
+          @media (min-width:1025px){
+           display: flex;
+           gap: 15px;
+          }
+      }
+      
+      .footer__2ndPart{
+        @media (min-width:768px) and (max-width:1024px){
+          display: flex;
+          gap: 15px;
+         }
+
+         @media (min-width:1025px){
+          display: flex;
+          gap: 15px;
+         }
+      }
+        .footer__link{
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #ffffff;
+            font-size: 15px;
+
+            @media (min-width:768px) and (max-width:1024px){
+              font-size: 14px;
+              gap: 7px;
+            }
+
+            @media (min-width:1025px){
+              gap: 10px;
+            }
+        }  
     }  
   }
 }  

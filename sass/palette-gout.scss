@@ -9,13 +9,16 @@
     }
 }
 
+
+/**************polices*************/
 $logo-police: "shrikhand", sans-serif;
 
+/************colors***************/
 $bg-light-green:#99E2D0;
 $bg-light-grey:#f6f6f6;
 $color-dark-green: #008766;
 $color-white:#ffffff;
-
+/**********mixins***************/
 @mixin btn{
   text-align: center;
   border-radius: 25px;
@@ -26,15 +29,19 @@ $color-white:#ffffff;
   box-shadow: $btn-shadow;
 }
 
+
+
+/*******variable ombrage*********************/
+
 $btn-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
 $header-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
 $aside-shadow: 0 4px 4px 0 rgba(0, 0, 0,0.25);
 $stepAndDishes-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 
-body{
 
-  .main-container{
-      background-color: $bg-light-grey;
+
+.main-container{
+    background-color: $bg-light-grey;
     
     header{
       display: flex;
@@ -91,7 +98,6 @@ body{
           padding-top: 7px;
           margin-right: -20px;
         }
-      
       }
 
       form{
@@ -186,5 +192,5 @@ body{
       }  
     }
   }  
-}  
+  
 
