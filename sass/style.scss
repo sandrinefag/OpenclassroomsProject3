@@ -33,23 +33,60 @@ $stepDishes-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
   color: $color-white;
   font-weight: 500;
   height: 50px;
+  font-size: 16px;
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%); 
   box-shadow:$btn-shadow;
+  // transition: font-size 0.8s;
+  // transition-delay: 100ms;
+  transition: font-size 0.8s 100ms;
 }
+
+@mixin btn-effect{
+  opacity: 0.85;
+  box-shadow: 2px 6px 12px 2px rgba(0, 0, 0, 0.3);
+  font-size: 16.5px;
+
+}
+
+/********heart-favorite**********/
+@mixin favorite-full{
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-clip: text;
+ -moz-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ -moz-text-fill-color:transparent;
+ transition-property: transform 4.5s;
+ transition-duration: 1000ms;
+ filter: opacity(0);
+ position: relative;
+ left: -26px;
+ transform: scale(0.1);
+}
+
+@mixin favorite-effect{
+    &:hover + .heart__full{
+        filter: opacity(100);
+        transform: scale(1);
+        // visibility: visible;
+    
+    }   
+}
+
+
 
 
 
 
 body{
 
-  header{
+  & .header{
     display: flex;
     justify-content: center;
     margin-bottom: 3px;
     height: 63px;
     box-shadow: $header-shadow;
 
-      .header__logo{
+      &__logo{
         width: 60%;
         font-size: 30px;
         margin: auto;
@@ -59,7 +96,8 @@ body{
     }
 
   aside{
-      .localisation__container{
+      
+       .localisation__container{
           background-color:#EAEAEA;
           box-shadow: $aside-shadow;
           text-align: center;
@@ -71,12 +109,12 @@ body{
           
           }    
       
-      .localisation__input::placeholder{
+          .localisation__input::placeholder{
           color: black;
           font-size: 16px;
           font-weight: 500;
         } 
-      .localisation__input:placeholder-shown{
+          .localisation__input:placeholder-shown{
           background-color: #EAEAEA;
           border: #EAEAEA solid 1px;  
           padding-left: 5px;
@@ -132,6 +170,10 @@ body{
               padding-top: 14px;
               @include btn; 
 
+              &:hover{
+                @include btn-effect;
+                 
+            }
               .presentation__link--color{
                 color: $color-white;
               }
@@ -373,17 +415,19 @@ body{
           position: absolute;
           left: 87%;
           bottom: 12%;
+          .heart__container img{
+            position: absolute;
+          }
 
           .heart__empty{
-            font-size: 1.3rem;
-             
+            @include favorite-effect;   
           }
 
           .heart__full{
-          font-size: 1.3rem;
-          display: none;
+           @include favorite-full;
+         }
           
-          }
+        }
 
           
         }
@@ -481,7 +525,7 @@ body{
         }  
     }  
   }
-}  
+ 
     
   
 
