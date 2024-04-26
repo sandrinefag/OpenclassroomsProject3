@@ -61,6 +61,8 @@ $color-white:#ffffff;
     }   
 }
 
+/********animation checkbox*********/
+
 
 
 /*******variable ombrage*********************/
@@ -166,10 +168,11 @@ $stepAndDishes-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 
         .menu__header{
           display: flex;
-          justify-content: space-around;
+          // justify-content: space-around;
           width: 90%;
           padding: 30px 0 20px 5px;
-
+          align-items: center;
+          margin-left: 10px;
           @media (min-width:768px) and (max-width:1024px){
           
           }
@@ -181,7 +184,7 @@ $stepAndDishes-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
           }
           
           .menu__title{
-            font-size: 24px;
+            font-size: 28px;
             font-family: $logo-police;
             font-weight: 400;
             width: 83%;
@@ -194,7 +197,8 @@ $stepAndDishes-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
           }
 
           .heart__container{
-           
+           position: relative;
+           left: 28px;
 
             @media (min-width:1025px){
               margin: 3px;
@@ -203,8 +207,8 @@ $stepAndDishes-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
             }
             .heart__empty{
               @include favorite-effect; 
-              position: relative;
-              right: 215px 
+              // position: relative;
+              // right: 215px 
              
             }
   
@@ -217,78 +221,158 @@ $stepAndDishes-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
           }
         }
 
-        form{
-          display: flex;
-          flex-direction: column;
-          gap: 40px;
-          padding-bottom: 30px;
+        @keyframes apparear{
+          from{
+            opacity:0;
+          }
+          to{
+            opacity: 1;
+          }
+        }
 
-          .dishes__section{
+        form{
             display: flex;
             flex-direction: column;
-            gap: 12px;
-            width: 93%;
-            margin: auto;
+            gap: 40px;
+            padding-bottom: 30px;
+           
+          
+          .dishes__section{
+              display: flex;
+              flex-direction: column;
+              gap: 12px;
+              animation: apparear 5s forwards;
+              opacity: 0;
+              
+            &:nth-child(1){
+              animation-delay: 0s;
+            }
+            
+            &:nth-child(2){
+              animation-delay:1s;
+            }
+            
+            &:nth-child(3){
+              animation-delay: 2s;
+            }
+            
 
             .dishes__step{
-              font-size: 18px;
-              font-weight: 300;
-              margin-bottom: -6px;
+                font-size: 18px;
+                font-weight: 300;
+                margin-bottom: -6px;
+                margin-left: 10px;
             }
 
             .title__line{
-              border-bottom: $bg-light-green solid 3px;
-              width: 12%;
+                border-bottom: $bg-light-green solid 3px;
+                width: 12%;
+                margin-left: 10px;
             }
 
             .dishes__container{
-              background-color: $color-white;
-              border-radius: 15px;
-              width: 100%;
-              display: flex;
-              justify-content: space-between;
-              padding: 15px;
-
-             
-              .dishes__txt{
-                width: 82%;
+                // width: 100%;
                 display: flex;
-                flex-direction: column;
-                gap: 5px;
+                padding: 0 10px 0 10px;
 
-                .dishes__title{
-                      font-size: 16px;
-                      font-weight: 500;
-
-                      @media (min-width:768px) and (max-width:1024px){
-                        font-size: 18px;
-                      }
-                    }
-                    .dishes__subtitle{
-                      font-size: 14px;
-
-                      @media (min-width:768px) and (max-width:1024px){
-                        font-size: 16px;
-                        font-weight: 300;
-                      }
-                    }
-              }
-                .dishes__price{
-                        padding-top: 8px;
-                        font-size: 15px;
-                        font-weight: 700;
-                      }
+                .dishes__txtAndPrice{
+                    background-color: #ffffff;
+                    width: 100%;
+                    border-radius: 15px;
+                    height: 69px;
+                    line-height: 23px;
+                    padding: 10px;
+                    transition: width 800ms ease;
                   
+                     .dishes__txt{
+                        width: 82%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px; 
+                      } 
+
+                      .dishes__title{
+                          font-size: 16px;
+                          font-weight: 500;
+                          text-overflow: ellipsis;
+                          overflow: hidden;
+                          white-space: nowrap;
+                          @media (min-width:768px) and (max-width:1024px){
+                              font-size: 18px;
+                          }
+                      }
+
+                    .dishes__descriptionPrice{
+                        display: flex;
+                        justify-content: space-between;
+            
+                        .dishes__subtitle{
+                            font-size: 14px;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
+
+                          @media (min-width:768px) and (max-width:1024px){
+                            font-size: 16px;
+                            font-weight: 300;
+                          }
+                        }
+                        .dishes__price{
+                            font-size: 14px;
+                            font-weight: 700;
+                            height: 19px;
+                        }            
+                    }  
+                    &:hover{
+                      width: 77%;
+                      border-radius: 0;
+                     
+                        & + .dishes__checkbox{
+                          width:23%;
+                          visibility: visible;
+                        }
+                          & + .checkbox{
+                          visibility: visible;
+                            
+                          }
+                    }
+                    
+                   
+                } 
+                
+                .dishes__checkbox{
+                  background-color: $bg-light-green;
+                  width: 0;
+                  border-radius: 0 20px 20px 0;
+                  height: 69px;
+                  transition: width 500ms ease;
+          
+                  .checkbox{
+                    width: 0;
+                   background-color: #ffffff;
+                   border-radius: 10px;
+                   color: $bg-light-green;
+                   font-size: 14px;
+                   display: flex;
+                   align-items: center;
+                   justify-content: center;
+                   position: relative;
+                   top: 25px;
+                   left: 22px;
+                   transition: width 500ms ease;
+                  //  visibility: hidden;
+                  }
+                }
             }
           }
+
           .btn-order{
             @include btn;
             width: 49%;
             margin: auto;
             border: none;
             &:hover{
-              @include btn-effect;
-               
+              @include btn-effect;   
           }
 
             @media (min-width:1025px){
@@ -337,7 +421,7 @@ $stepAndDishes-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
               @media (min-width:1025px){
                padding: 0;
               }
-            }
+      }
       .footer__linkContainer{
         line-height: 30px;
   
@@ -396,4 +480,4 @@ $stepAndDishes-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
     }
   }  
       
-    
+   
