@@ -99,82 +99,75 @@ $stepDishes-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
    }
 
 body{
-   .loader__container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff;
-    height: 100vh;
-    position: absolute;
-    inset: 0 0 0 0;
-    z-index: 1;
-    opacity: 0.9;
-    height: 100vh;
-    gap: 20px;
-    animation: disappear 3.5s forwards;
+    .loader{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffffff;
+      height: 100vh;
+      position: absolute;
+      inset: 0 0 0 0;
+      z-index: 1;
+      opacity: 0.9;
+      height: 100vh;
+      gap: 20px;
+      animation: disappear 3.5s forwards;
 
-       .loader__content{ 
-          width: 90%;
-          display: flex;
-          justify-content: center;
-          gap: 20px;
-          position: relative;
-          height: 4%;
-    
-          @media (min-width:768px) and (max-width:1024px){
-            width: 70%;
-          }
-
-          @media (min-width:1025px){
-            width: 33%;
-          }
-     
-      
-          @for $i from 1 through $num-points {
-            .loader__point:nth-child(#{$i}) {
-            background-color: pink;
-            width: 8%;
-            border-radius: 25px;
-            animation: points $anim-dur 3;
-            // animation-iteration-count:3;
-            animation-delay: $anim-delay * $i;
-              }
-
-            .loader__point:nth-child(1){
-              background-color: #99E2D0;
-            }
-            .loader__point:nth-child(2){
-              background-color: #FF79DA;
-            }
-            .loader__point:nth-child(3){
-              background-color: #9356DC;
-            }
-          }
-        }
-
-      .loader__txt{
+      &__txt{
         font-size: 13px;
         background-color:  #9356DC;
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
 
-        @media (min-width:768px) and (max-width:1024px){
-          font-size: 20px;
-         }
+          @media (min-width:768px) and (max-width:1024px){
+            font-size: 20px;
+          }
 
-         @media (min-width:1025px){
-         font-size: 25px;
-        }
-
+          @media (min-width:1025px){
+          font-size: 25px;
+          }
       }
-  }
 
-   
+      &__animation{ 
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        position: relative;
+        height: 4%;
+      
+        @media (min-width:768px) and (max-width:1024px){
+          width: 70%;
+        }   
 
-
-
+        @media (min-width:1025px){
+          width: 33%;
+        }
+        
+        @for $i from 1 through $num-points {
+          &--point:nth-child(#{$i}) {
+          width: 8%;
+          border-radius: 25px;
+          animation: points $anim-dur 3;
+          // animation-iteration-count:3;
+          animation-delay: $anim-delay * $i;
+          } 
+            &--green{
+                background-color: #99E2D0;
+              }
+              &--pink{
+                background-color: #FF79DA;
+              }
+              &--purple{
+                background-color: #9356DC;
+              }
+        }
+      }
+    }
+    
+    
     .header{
       display: flex;
       justify-content: center;
@@ -182,42 +175,40 @@ body{
       height: 63px;
       box-shadow: $header-shadow;
 
-        &__logo{
-          width: 60%;
-          font-size: 30px;
-          margin: auto;
-          text-align: center;
-          font-family: $logo-police;
-        }
+       &__logo{
+        width: 60%;
+        font-size: 30px;
+        margin: auto;
+        text-align: center;
+        font-family: $logo-police;  
+        } 
     }
 
   aside{
-      
-       .localisation__container{
+       .localisation{
           background-color:#EAEAEA;
           box-shadow: $aside-shadow;
           text-align: center;
           padding-left: 50px;
           height: 50px;
       
-          .localisation__icon{
+          &__icon{
             margin-top: 15px;
-          
           }    
       
-          .localisation__input::placeholder{
+          &__input::placeholder{
           color: black;
           font-size: 16px;
           font-weight: 500;
         } 
-          .localisation__input:placeholder-shown{
+          &__input:placeholder-shown{
           background-color: #EAEAEA;
           border: #EAEAEA solid 1px;  
           padding-left: 5px;
         }
       }
 
-      .presentation__container{
+      .presentation{
           background-color: #f3f3f3;
           margin-top: 5px;
           height: 250px;  
@@ -228,11 +219,9 @@ body{
 
           @media (min-width:1025px){
             height: 228px;
-
           }
-
          
-          .presentation__title{
+          &__title{
               width: 73%;
               font-size: 24px;
               text-align: center;
@@ -242,12 +231,10 @@ body{
               
           @media (min-width:1025px){
             font-size: 40px;
-
+          }
           }
 
-          }
-
-          .presentation__txt{
+          &__txt{
               width: 89%;
               font-size: 16px;
               font-weight: 300;
@@ -256,21 +243,19 @@ body{
 
               @media (min-width:1025px){
                 font-size: 18px;
-    
               }
           }
 
-          .presentation__link{
+          &__link{
               width: 218px;
               margin: 25px auto;
               padding-top: 14px;
               @include btn; 
 
               &:hover{
-                @include btn-effect;
-                 
-            }
-              .presentation__link--color{
+                @include btn-effect;    
+              }
+              &--color{
                 color: $color-white;
               }
           }  
@@ -614,7 +599,7 @@ body{
     }  
   }
 }
-    
+ 
   
 
   /*# sourceMappingURL=style.css.map */

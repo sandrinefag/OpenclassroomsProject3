@@ -23,12 +23,12 @@
 		<link rel="stylesheet" href="sass/style.css">
 	</head>
 	<body>
-		<div class="loader__container">
+		<div class="loader">
 			<div class="loader__txt"><h1 class="loader__title">Veuillez patienter...</h1></div>
-			<div class="loader__content">
-				 <div class="loader__point"></div>
-				 <div class="loader__point"></div>
-				 <div class="loader__point"></div>
+			<div class="loader__animation">
+				 <div class="loader__animation--point loader__animation--green"></div>
+				 <div class="loader__animation--point loader__animation--pink"></div>
+				 <div class="loader__animation--point loader__animation--purple"></div>
 			 </div>
 		 </div>
 
@@ -38,7 +38,7 @@
 			</header>
 
 			<aside>
-				<form action="#" method="get" class="localisation__container">
+				<form action="" method="get" class="localisation">
 					<i class="fa-solid fa-location-dot localisation__icon"></i>
 					<input class="localisation__input"
 						type="text"
@@ -46,7 +46,7 @@
 						id="geolocalisation"
 						placeholder="Paris, Belleville">
 				</form>
-				<section class="presentation__container">
+				<section class="presentation">
 						<h2 class="presentation__title">
 							Réservez le menu qui vous convient
 						</h2>
