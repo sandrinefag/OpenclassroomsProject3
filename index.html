@@ -23,18 +23,19 @@
 		<link rel="stylesheet" href="sass/style.css">
 	</head>
 	<body>
-		<div class="loader">
-			<div class="loader__txt"><h1 class="loader__title">Veuillez patienter...</h1></div>
-			<div class="loader__animation">
-				 <div class="loader__animation--point loader__animation--green"></div>
-				 <div class="loader__animation--point loader__animation--pink"></div>
-				 <div class="loader__animation--point loader__animation--purple"></div>
-			 </div>
-		 </div>
-
+		<div class="loader-container">
+			<div class="loader">
+				<div class="loader__txt"><h1 class="loader__title">Veuillez patienter...</h1></div>
+				<div class="loader__animation">
+					<div class="loader__animation--point loader__animation--green"></div>
+					<div class="loader__animation--point loader__animation--pink"></div>
+					<div class="loader__animation--point loader__animation--purple"></div>
+				</div>
+			</div>
+		</div>
 		<div class="main-container">
-			<header class="header">
-					<h1 class="header__logo">Ohmyfood</h1>
+			<header class="headers">
+					<h1 class="headers__logo">Ohmyfood</h1>
 			</header>
 
 			<aside>
@@ -47,139 +48,137 @@
 						placeholder="Paris, Belleville">
 				</form>
 				<section class="presentation">
-						<h2 class="presentation__title">
-							Réservez le menu qui vous convient
-						</h2>
-						<p class="presentation__txt">
-							Découvrez des restaurants d'exception, sélectionnés par nos soins.
-						</p>
-						<p class="presentation__link" ><a href="#restos" class="presentation__link--color">Explorer nos restaurants</a></p>    
+					<h2 class="presentation__title">
+						Réservez le menu qui vous convient
+					</h2>
+					<p class="presentation__txt">
+						Découvrez des restaurants d'exception, sélectionnés par nos soins.
+					</p>
+					<p class="presentation__link" ><a href="#restos" class="presentation__link--color">Explorer nos restaurants</a></p>    
 				</section>
 	
 			</aside>
 
 			<main>
 				<div class="fonctionnement-and-restaurants">
-					<section class="sectionFonctionnement">
-						<h3 class="fonctionnement__title">Fonctionnement</h3>
-						<div class="fonctionnement__container">
-							<div class="fonctionnement__stepOrder">
-								<p class="fonctionnement__number">1</p>
-								<i class="fa-solid fa-mobile-screen fonctionnement__icons"></i>
-								<p class="fonctionnement__txt">Choisissez un restaurant</p>
+					<section class="stage">
+						<h3 class="stage__title">Fonctionnement</h3>
+						<div class="stepOrder">
+							<div class="step">
+								<p class="step__number">1</p>
+								<i class="fa-solid fa-mobile-screen step__icons"></i>
+								<p class="step__txt">Choisissez un restaurant</p>
 							</div>
-							<div class="fonctionnement__stepOrder">
-								<p class="fonctionnement__number">2</p>
-								<i class="fa-solid fa-list fonctionnement__icons"></i>
-								<p class="fonctionnement__txt">Composez votre menu</p>
+							<div class="step">
+								<p class="step__number">2</p>
+								<i class="fa-solid fa-list step__icons"></i>
+								<p class="step__txt">Composez votre menu</p>
 							</div>
-							<div class="fonctionnement__stepOrder">
-								<p class="fonctionnement__number">3</p>
-								<i class="fa-solid fa-store fonctionnement__icons fonctionnement__icons--purple"></i>
-								<p class="fonctionnement__txt">Dégustez au restaurant</p>
+							<div class="step">
+								<p class="step__number">3</p>
+								<i class="fa-solid fa-store step__icons step__icons--purple"></i>
+								<p class="step__txt">Dégustez au restaurant</p>
 							</div>
 						</div>
 					</section>
 
 					<section id="restos" class="restoSection">
-						<h3 class="resto__title">Restaurants</h3>
-						<div class="resto__container">
+						<h3 class="restoSection__title">Restaurants</h3>
+						<div class="restoSection__container">
 
-							<article class="resto__cards">
+							<article class="restoCards">
 								<a href="restaurants/palette-gout.html">
-									<img class="resto__photo" src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Un plat du restaurant La palette du goût">
-									<p class="resto_badge">Nouveau</p>
-									<div  class="resto__cardContent">
-										<div class="resto__txt">
-											<h4 class="resto__name">La palette du goût</h4>
-											<p class="resto__subtitle">Ménilmontant</p>
+									<img class="restoCards__photo" src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Un plat du restaurant La palette du goût">
+									<p class="restoCards__badge">Nouveau</p>
+									<div  class="cardsContent">
+										<div class="cardsContent__txt">
+											<h4 class="cardsContent__name">La palette du goût</h4>
+											<p class="cardsContent__subtitle">Ménilmontant</p>
 										</div>
 									</div>
 								</a>	
-								<div class="heart__container">
+								<div class="heart">
 									<img class="heart__empty" src="assets/images/hearts/heart-empty.png" alt="coeur favori non ajouté">
 									<img class="heart__full" src="assets/images/hearts/heart-full.png" alt="coeur favori ajouté">
 								</div>
 							</article>
 
-							<article class="resto__cards">
+							<article class="restoCards">
 								<a href="restaurants/note-enchantee.html">
-									<img class="resto__photo" src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Un plat du restaurant La note enchantée">
-									<p class="resto_badge">Nouveau</p>
-									<div  class="resto__cardContent">
-										<div class="resto__txt">
-											<h4 class="resto__name">La note enchantée</h4>
-											<p class="resto__subtitle">Charonne</p>
+									<img class="restoCards__photo" src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Un plat du restaurant La note enchantée">
+									<p class="restoCards__badge">Nouveau</p>
+									<div  class="cardsContent">
+										<div class="cardsContent__txt">
+											<h4 class="cardsContent__name">La note enchantée</h4>
+											<p class="cardsContent__subtitle">Charonne</p>
 										</div>
 									</div>	
 								</a>	
-								<div class="heart__container">
+								<div class="heart">
 									<img class="heart__empty" src="assets/images/hearts/heart-empty.png" alt="coeur favori non ajouté">
 									<img class="heart__full" src="assets/images/hearts/heart-full.png" alt="coeur favori ajouté">
-									<!-- <i class="fa-regular fa-heart heart__empty"></i>
-									<i class="fa-solid fa-heart heart__full"></i> -->
-									
 								</div>	
 							</article>
 
-							<article class="resto__cards">
+							<article class="restoCards">
 								<a href="restaurants/francaise.html">	
-									<img class="resto__photo" src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Un plat du restaurant A la française">
-									<div class="resto__cardContent">
-										<div class="resto__txt">
-											<h4 class="resto__name">A la française</h4>
-											<p class="resto__subtitle">Cité Rouge</p>
+									<img class="restoCards__photo" src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Un plat du restaurant A la française">
+									<div class="cardsContent">
+										<div class="cardsContent__txt">
+											<h4 class="cardsContent__name">A la française</h4>
+											<p class="cardsContent__subtitle">Cité Rouge</p>
 										</div>
 									</div>	
 								</a>	
-								<div class="heart__container">
+								<div class="heart">
 									<img class="heart__empty" src="assets/images/hearts/heart-empty.png" alt="coeur favori non ajouté">
 									<img class="heart__full" src="assets/images/hearts/heart-full.png" alt="coeur favori ajouté">
 								</div>	
 							</article>
 
-							<article class="resto__cards">
+							<article class="restoCards">
 								<a href="restaurants/delice-sens.html">
-									<img class="resto__photo" src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Un plat du restaurant Le délice des sens">
-									<div class="resto__cardContent">
-										<div class="resto__txt">
-											<h4 class="resto__name">Le délice des sens</h4>
-											<p class="resto__subtitle">Folie-Méricourt</p>
+									<img class="restoCards__photo" src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Un plat du restaurant Le délice des sens">
+									<div class="cardsContent">
+										<div class="cardsContent__txt">
+											<h4 class="cardsContent__name">Le délice des sens</h4>
+											<p class="cardsContent__subtitle">Folie-Méricourt</p>
 										</div>
 									</div>
 								</a>
-								<div class="heart__container">
+								<div class="heart">
 									<img class="heart__empty" src="assets/images/hearts/heart-empty.png" alt="coeur favori non ajouté">
 									<img class="heart__full" src="assets/images/hearts/heart-full.png" alt="coeur favori ajouté">
 								</div>
-							</article>
+						</article>
 							
 						</div>
-				</section>	
+					</section>	
 				</div>
 			</main>
 
-			<footer>
-				<h4 class="footer__logo footer__logo--white">Ohmyfood</h4>
+			<footer class="footer">
+				<h4 class="footer__logo">Ohmyfood</h4>
 				
-				<div class="footer__linkContainer">
-					<div class="footer__1stPart">
-						<a class="footer__link " href="">
+				<div class="footerLinks">
+					<div class="linksContainer">
+						<a class="linksContainer__link " href="">
 							<i class="fa-solid fa-utensils"></i>
 							<p>Proposer un restaurant</p>
 						</a>
 					
-						<a class="footer__link " href="#">
+						<a class="linksContainer__link" href="#">
 							<i class="fa-solid fa-handshake-angle"></i>
 							<p>Devenir partenaire</p>
 						</a>
 					</div>
-					<div class="footer__2ndPart">
-						<a class="footer__link"  href="#">Mentions légales</a>
-						<a class="footer__link" href="mailto:sandrine94320@hotmail.fr">Contact</a>
+					<div class="linksContainer">
+						<a class="linksContainer__link"  href="#">Mentions légales</a>
+						<a class="linksContainer__link" href="mailto:sandrine94320@hotmail.fr">Contact</a>
 					</div>	
 				</div>
 			</footer>
 		</div>
-	</body>
+	
+   </body>
 </html>

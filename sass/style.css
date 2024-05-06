@@ -1,19 +1,16 @@
-/**************General************/
-* {
-  font-family: "Roboto", sans-serif;
-  box-sizing: border-box;
-  margin: 0;
-  text-decoration: none;
-}
-* a {
-  color: inherit;
-}
-
-/***********polices***************/
-/*************colors***************/
-/**********shadow*********************/
-/*************btn*******************/
-/********heart-favorite**********/
+@charset "UTF-8";
+/****loader animation***/
+/**********shadow ensemble du site*********************/
+/***********polices ensemble du site***************/
+/*************colors ensemble du site***************/
+/************************parametrage ensemble du site******************************************/
+/****************************************hearts animation (ensemble du site)********************************************/
+/****loader animation*******/
+/****************************buttons(ensemble du site)***********************************/
+/**********************************************index agencement flex**********************/
+/********************************************footer agencement (ensemble du site)*****************************/
+/*********************************base-menu***********************************************/
+/**loader qui disparait a la fin du chargement de la page**/
 @keyframes disappear {
   0% {
     visibility: visible;
@@ -22,6 +19,7 @@
     visibility: hidden;
   }
 }
+/** points du loader qui grossit et degrossit**/
 @keyframes points {
   0% {
     transform: scale(0);
@@ -39,109 +37,132 @@
     transform: scale(0);
   }
 }
-body .loader {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffffff;
-  height: 100vh;
-  position: absolute;
+/********menu apparait en decalé*****/
+@keyframes apparear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/****footer***/
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  text-decoration: none;
+}
+* a {
+  color: inherit;
+}
+
+body .loader-container {
+  position: fixed;
   inset: 0 0 0 0;
   z-index: 1;
+  background-color: #ffffff;
   opacity: 0.9;
-  height: 100vh;
-  gap: 20px;
   animation: disappear 3.5s forwards;
 }
-body .loader__txt {
-  font-size: 13px;
+body .loader-container .loader {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: center;
+  height: 100vh;
+}
+body .loader-container .loader__txt {
+  font-size: 16px;
   background-color: #9356DC;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-left: 5%;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  body .loader__txt {
+  body .loader-container .loader__txt {
     font-size: 20px;
   }
 }
 @media (min-width: 1025px) {
-  body .loader__txt {
+  body .loader-container .loader__txt {
     font-size: 25px;
   }
 }
-body .loader__animation {
+body .loader-container .loader__animation {
   width: 90%;
   display: flex;
   justify-content: center;
   gap: 20px;
   position: relative;
-  height: 4%;
+  height: 5%;
+  right: 19%;
+  top: 20px;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  body .loader__animation {
+  body .loader-container .loader__animation {
     width: 70%;
   }
 }
 @media (min-width: 1025px) {
-  body .loader__animation {
+  body .loader-container .loader__animation {
     width: 33%;
   }
 }
-body .loader__animation--point:nth-child(1) {
-  width: 8%;
+body .loader-container .loader__animation--point:nth-child(1) {
+  width: 6%;
   border-radius: 25px;
   animation: points 3s 3;
   animation-delay: 1s;
 }
-body .loader__animation--green {
+body .loader-container .loader__animation--green {
   background-color: #99E2D0;
 }
-body .loader__animation--pink {
+body .loader-container .loader__animation--pink {
   background-color: #FF79DA;
 }
-body .loader__animation--purple {
+body .loader-container .loader__animation--purple {
   background-color: #9356DC;
 }
-body .loader__animation--point:nth-child(2) {
-  width: 8%;
+body .loader-container .loader__animation--point:nth-child(2) {
+  width: 6%;
   border-radius: 25px;
   animation: points 3s 3;
   animation-delay: 2s;
 }
-body .loader__animation--green {
+body .loader-container .loader__animation--green {
   background-color: #99E2D0;
 }
-body .loader__animation--pink {
+body .loader-container .loader__animation--pink {
   background-color: #FF79DA;
 }
-body .loader__animation--purple {
+body .loader-container .loader__animation--purple {
   background-color: #9356DC;
 }
-body .loader__animation--point:nth-child(3) {
-  width: 8%;
+body .loader-container .loader__animation--point:nth-child(3) {
+  width: 6%;
   border-radius: 25px;
   animation: points 3s 3;
   animation-delay: 3s;
 }
-body .loader__animation--green {
+body .loader-container .loader__animation--green {
   background-color: #99E2D0;
 }
-body .loader__animation--pink {
+body .loader-container .loader__animation--pink {
   background-color: #FF79DA;
 }
-body .loader__animation--purple {
+body .loader-container .loader__animation--purple {
   background-color: #9356DC;
 }
-body .header {
+body .headers {
   display: flex;
   justify-content: center;
   margin-bottom: 3px;
   height: 63px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
 }
-body .header__logo {
+body .headers__logo {
   width: 60%;
   font-size: 30px;
   margin: auto;
@@ -159,12 +180,12 @@ body aside .localisation__icon {
   margin-top: 15px;
 }
 body aside .localisation__input::-moz-placeholder {
-  color: black;
+  color: #353535;
   font-size: 16px;
   font-weight: 500;
 }
 body aside .localisation__input::placeholder {
-  color: black;
+  color: #353535;
   font-size: 16px;
   font-weight: 500;
 }
@@ -239,53 +260,53 @@ body aside .presentation__link:hover {
 body aside .presentation__link--color {
   color: #ffffff;
 }
-body .sectionFonctionnement {
+body .stage {
   margin-left: 20px;
   padding-top: 40px;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  body .sectionFonctionnement {
+  body .stage {
     margin: auto;
     width: 94%;
   }
 }
 @media (min-width: 1025px) {
-  body .sectionFonctionnement {
+  body .stage {
     padding: 50px 100px 50px 100px;
     margin: 0;
   }
 }
-body .sectionFonctionnement .fonctionnement__title {
+body .stage__title {
   font-size: 24px;
 }
 @media (min-width: 1025px) {
-  body .sectionFonctionnement .fonctionnement__title {
+  body .stage__title {
     margin-left: 59px;
     padding-bottom: 10px;
   }
 }
-body .sectionFonctionnement .fonctionnement__container {
+body .stage .stepOrder {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  body .sectionFonctionnement .fonctionnement__container {
-    gap: 30px;
+  body .stage .stepOrder {
     display: flex;
     flex-direction: row;
+    gap: 30px;
   }
 }
 @media (min-width: 1025px) {
-  body .sectionFonctionnement .fonctionnement__container {
+  body .stage .stepOrder {
     width: 89%;
     display: flex;
     flex-direction: row;
-    margin: auto;
     gap: 30px;
+    margin: auto;
   }
 }
-body .sectionFonctionnement .fonctionnement__container .fonctionnement__stepOrder {
+body .stage .stepOrder .step {
   display: flex;
   background-color: #f6f6f6;
   margin-top: 20px;
@@ -295,17 +316,17 @@ body .sectionFonctionnement .fonctionnement__container .fonctionnement__stepOrde
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  body .sectionFonctionnement .fonctionnement__container .fonctionnement__stepOrder {
+  body .stage .stepOrder .step {
     width: 50%;
   }
 }
 @media (min-width: 1025px) {
-  body .sectionFonctionnement .fonctionnement__container .fonctionnement__stepOrder {
+  body .stage .stepOrder .step {
     width: 35%;
     gap: 20px;
   }
 }
-body .sectionFonctionnement .fonctionnement__container .fonctionnement__stepOrder .fonctionnement__number {
+body .stage .stepOrder .step__number {
   background-color: #9356DC;
   border-radius: 20px;
   width: 20px;
@@ -318,26 +339,26 @@ body .sectionFonctionnement .fonctionnement__container .fonctionnement__stepOrde
   top: 25px;
   font-size: 14px;
 }
-body .sectionFonctionnement .fonctionnement__container .fonctionnement__stepOrder .fonctionnement__icons {
+body .stage .stepOrder .step__icons {
   margin: auto;
   color: #7e7e7e;
 }
 @media (min-width: 1025px) {
-  body .sectionFonctionnement .fonctionnement__container .fonctionnement__stepOrder .fonctionnement__icons {
+  body .stage .stepOrder .step__icons {
     margin: 25px 5px;
   }
 }
-body .sectionFonctionnement .fonctionnement__container .fonctionnement__stepOrder .fonctionnement__icons--purple {
+body .stage .stepOrder .step__icons--purple {
   color: #9356DC;
 }
-body .sectionFonctionnement .fonctionnement__container .fonctionnement__stepOrder .fonctionnement__txt {
+body .stage .stepOrder .step__txt {
   margin: auto;
   font-weight: 500;
   font-size: 16px;
   margin-left: -5px;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  body .sectionFonctionnement .fonctionnement__container .fonctionnement__stepOrder .fonctionnement__txt {
+  body .stage .stepOrder .step__txt {
     font-size: 14px;
   }
 }
@@ -351,32 +372,31 @@ body .restoSection {
     margin: auto;
   }
 }
-body .restoSection .resto__title {
+body .restoSection__title {
   font-size: 24px;
   padding-top: 30px;
   margin-left: 20px;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  body .restoSection .resto__title {
+  body .restoSection__title {
     margin-left: 25px;
   }
 }
 @media (min-width: 1025px) {
-  body .restoSection .resto__title {
+  body .restoSection__title {
     padding: 0;
     margin-left: 0;
   }
 }
-body .restoSection .resto__container {
+body .restoSection__container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 18px;
-  padding: 20px 0;
-  padding-bottom: 50px;
+  padding: 20px 0 50px 0;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  body .restoSection .resto__container {
+  body .restoSection__container {
     width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
@@ -385,14 +405,14 @@ body .restoSection .resto__container {
   }
 }
 @media (min-width: 1025px) {
-  body .restoSection .resto__container {
+  body .restoSection__container {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
     gap: 50px;
   }
 }
-body .restoSection .resto__container .resto__cards {
+body .restoSection__container .restoCards {
   position: relative;
   width: 90%;
   background-color: #ffffff;
@@ -400,27 +420,26 @@ body .restoSection .resto__container .resto__cards {
   height: 210px;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  body .restoSection .resto__container .resto__cards {
+  body .restoSection__container .restoCards {
     width: 43%;
   }
 }
 @media (min-width: 1025px) {
-  body .restoSection .resto__container .resto__cards {
+  body .restoSection__container .restoCards {
     width: 45%;
     height: 214px;
   }
 }
-body .restoSection .resto__container .resto__cards .resto__photo {
+body .restoSection__container .restoCards__photo {
   width: 100%;
   height: 140px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 15px 15px 0 0;
 }
-body .restoSection .resto__container .resto__cards .resto_badge {
+body .restoSection__container .restoCards__badge {
   position: absolute;
-  top: 5%;
-  left: 73%;
+  inset: 5% 0 0 73%;
   background-color: #99E2D0;
   color: #008766;
   border-radius: 2px;
@@ -433,46 +452,44 @@ body .restoSection .resto__container .resto__cards .resto_badge {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
 }
 @media (min-width: 1025px) {
-  body .restoSection .resto__container .resto__cards .resto_badge {
+  body .restoSection__container .restoCards__badge {
     font-size: 14px;
   }
 }
-body .restoSection .resto__container .resto__cards .resto__cardContent {
+body .restoSection__container .restoCards .cardsContent {
   display: flex;
   flex-direction: row;
+  gap: 30px;
   width: 78%;
 }
-body .restoSection .resto__container .resto__cards .resto__cardContent .resto__txt {
+body .restoSection__container .restoCards .cardsContent__txt {
   width: 78%;
   line-height: 15px;
   padding-top: 2px;
 }
-body .restoSection .resto__container .resto__cards .resto__cardContent .resto__name {
+body .restoSection__container .restoCards .cardsContent__name {
   font-size: 18px;
   margin: 10px;
 }
-body .restoSection .resto__container .resto__cards .resto__cardContent .resto__subtitle {
+body .restoSection__container .restoCards .cardsContent__subtitle {
   margin: 10px;
 }
 @media (min-width: 1025px) {
-  body .restoSection .resto__container .resto__cards .resto__cardContent .resto__subtitle {
+  body .restoSection__container .restoCards .cardsContent__subtitle {
     font-size: 18px;
     font-weight: 300;
   }
 }
-body .restoSection .resto__container .resto__cards .heart__container {
+body .restoSection__container .restoCards .heart {
   position: relative;
   left: 87%;
   bottom: 23%;
 }
-body .restoSection .resto__container .resto__cards .heart__container .heart__container img {
-  position: absolute;
-}
-body .restoSection .resto__container .resto__cards .heart__container .heart__empty:hover + .heart__full {
+body .restoSection__container .restoCards .heart .heart__empty:hover + .heart__full {
   filter: opacity(100);
   transform: scale(1);
 }
-body .restoSection .resto__container .resto__cards .heart__container .heart__full {
+body .restoSection__container .restoCards .heart .heart__full {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   -webkit-background-clip: text;
           background-clip: text;
@@ -486,13 +503,13 @@ body .restoSection .resto__container .resto__cards .heart__container .heart__ful
   left: -26px;
   transform: scale(0.1);
 }
-body footer {
+body .footer {
   background-color: #353535;
   font-size: 14px;
   padding: 22px 25px;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  body footer {
+  body .footer {
     display: flex;
     flex-direction: row-reverse;
     align-items: end;
@@ -500,14 +517,17 @@ body footer {
   }
 }
 @media (min-width: 1025px) {
-  body footer {
+  body .footer {
     display: flex;
     flex-direction: row-reverse;
     align-items: end;
     gap: 60px;
+    height: 114px;
+    position: relative;
+    z-index: 0;
   }
 }
-body footer .footer__logo {
+body .footer__logo {
   font-family: "shrikhand", sans-serif;
   color: #ffffff;
   font-weight: 500;
@@ -515,72 +535,68 @@ body footer .footer__logo {
   font-size: 18px;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  body footer .footer__logo {
+  body .footer__logo {
     padding-bottom: 0;
   }
 }
 @media (min-width: 1025px) {
-  body footer .footer__logo {
+  body .footer__logo {
     padding: 0;
   }
 }
-body footer .footer__linkContainer {
+body .footer .footerLinks {
   line-height: 30px;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  body footer .footer__linkContainer {
+  body .footer .footerLinks {
     display: flex;
-    width: 73%;
     gap: 15px;
+    width: 73%;
   }
 }
 @media (min-width: 1025px) {
-  body footer .footer__linkContainer {
+  body .footer .footerLinks {
     display: flex;
     gap: 50px;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  body footer .footer__linkContainer .footer__1stPart {
+  body .footer .footerLinks .linksContainer {
     display: flex;
     gap: 15px;
   }
 }
 @media (min-width: 1025px) {
-  body footer .footer__linkContainer .footer__1stPart {
+  body .footer .footerLinks .linksContainer {
     display: flex;
     gap: 15px;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
-  body footer .footer__linkContainer .footer__2ndPart {
-    display: flex;
-    gap: 15px;
-  }
-}
-@media (min-width: 1025px) {
-  body footer .footer__linkContainer .footer__2ndPart {
-    display: flex;
-    gap: 15px;
-  }
-}
-body footer .footer__linkContainer .footer__link {
+body .footer .footerLinks .linksContainer__link {
   display: flex;
+  gap: 15px;
   align-items: center;
-  gap: 12px;
   color: #ffffff;
   font-size: 15px;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  body footer .footer__linkContainer .footer__link {
+  body .footer .footerLinks .linksContainer__link {
     font-size: 14px;
     gap: 7px;
   }
 }
 @media (min-width: 1025px) {
-  body footer .footer__linkContainer .footer__link {
+  body .footer .footerLinks .linksContainer__link {
     gap: 10px;
   }
 }
 
+/**************General************/
+/*************btn*******************/
+/********heart-favorite**********/
+/*flex**/
+/**mixin footer**/
+/***loader animation**/
+/*****flex column****/
+/*********/
 /*# sourceMappingURL=style.css.map */

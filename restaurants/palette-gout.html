@@ -23,193 +23,185 @@
         <link rel="stylesheet" href="../sass/palette-gout.css">
 </head>
 <body>
-    <div class="main-container">
-        <header>
+    <div class="body-container">
+        <header class="header">
             <a href="../index.html"><i class="fa-solid fa-arrow-left header__arrow"></i></a>
             <h1 class="header__logo">Ohmyfood</h1>
         </header>
-        <div class="mainPhoto__container">
-            <img class="mainPhoto__photo" src="../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+        <div class="photoResto">
+            <img class="photoResto__picture" src="../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
 			alt="Plat du restaurant La palette du goût">
         </div>
 
         <main class="main__container">
             <div class="menu__content">
-                <div class="menu__header">
-                    <h2 class="menu__title">La palette du goût</h2>
-                    <div class="heart__container">
+                <div class="menuHeader">
+                    <h2 class="menuHeader__title">La palette du goût</h2>
+                    <div class="heartContainer">
                         <img class="heart__empty" src="../assets/images/hearts/heart-empty.png" alt="coeur favori non ajouté">
                         <img class="heart__full" src="../assets/images/hearts/heart-full.png" alt="coeur favori ajouté">
                     </div>
                 </div>
 
-                <form method="get" action="#" >
-
-                    <section class="dishes__section dishes__starter">
-                       
-                        <h3 class="dishes__step">Entrées</h3>
-                        <div class="title__line"></div>
-
-                        <div class="dishes__container">
-                            <div class="dishes__txtAndPrice">
-                                <div class="dishes__txt">
-                                    <h4 class="dishes__title">Fricassé d'escargots</h4>
+                <div class="dishesContainer">
+                    <section class="dishesSection">
+                        <h3 class="dishesSection__step">ENTREES</h3>
+                        <div class="dishesSection__line"></div>
+                        <div class="menuContent">
+                            <div class="dishesInfos">
+                                <div class="dishesNames">
+                                    <h4 class="dishesNames__title">Fricassé d'escargots</h4>
                                 </div> 
-                                <div class="dishes__descriptionPrice">
-                                    <p class="dishes__subtitle">Au piment d'Espelette</p>
-                                    <p class="dishes__price">25€</p>  
+                                <div class="dishesDetails">
+                                    <p class="dishesDetails__subtitle">Au piment d'Espelette</p>
+                                    <p class="dishesDetails__price">25€</p>  
                                 </div> 
                             </div>    
-                            <div class="dishes__checkbox"><i class="fa-solid fa-circle-check"></i></div>  
-                               
+                            <div class="checkbox"><i class="fa-solid fa-circle-check"></i></div>      
                         </div>
 
-                        <div class="dishes__container">
-                            <div class="dishes__txtAndPrice">
-                                <div class="dishes__txt">
-                                    <h4 class="dishes__title">Foie gras de canard mi-cuit</h4>
+                        <div class="menuContent">
+                            <div class="dishesInfos">
+                                <div class="dishesNames">
+                                    <h4 class="dishesNames__title">Foie gras de canard mi-cuit</h4>
                                 </div>
-                                <div class="dishes__descriptionPrice">
-                                    <p class="dishes__subtitle">Et ses copeaux de truffe noire</p>
-                                    <p class="dishes__price">35€</p>    
+                                <div class="dishesDetails">
+                                    <p class="dishesDetails__subtitle">Et ses copeaux de truffe noire</p>
+                                    <p class="dishesDetails__price">35€</p>    
                                 </div>
                             </div>
-                            <div class="dishes__checkbox"><i class="fa-solid fa-circle-check"></i> </div> 
-                           
+                            <div class="checkbox"><i class="fa-solid fa-circle-check"></i> </div> 
                         </div>    
                             
-
-                        <div class="dishes__container">
-                            <div class="dishes__txtAndPrice">
-                                <div class="dishes__txt">
-                                    <h4 class="dishes__title">Foie gras de canard mi-cuit</h4>
+                        <div class="menuContent">
+                            <div class="dishesInfos">
+                                <div class="dishesNames">
+                                    <h4 class="dishesNames__title">Foie gras de canard mi-cuit</h4>
                                 </div>  
-                                <div class="dishes__descriptionPrice">
-                                    <p class="dishes__subtitle">Et ses copeaux de truffe noire</p>
-                                    <p class="dishes__price">20€</p>
+                                <div class="dishesDetails">
+                                    <p class="dishesDetails__subtitle">Et ses copeaux de truffe noire</p>
+                                    <p class="dishesDetails__price">20€</p>
                                 </div>
                             </div>
-                            <div class="dishes__checkbox"><i class="fa-solid fa-circle-check"></i> </div>     
+                            <div class="checkbox"><i class="fa-solid fa-circle-check"></i> </div>     
                         </div>
                     </section>
 
-                    <section class="dishes__section dishes__main">
-                        <h3 class="dishes__step">Plats</h3>
-                        <div class="title__line"></div>
-
-                        <div class="dishes__container">
-                            <div class="dishes__txtAndPrice">
-                                <div class="dishes__txt">
-                                    <h4 class="dishes__title">Filet de boeuf aux herbes</h4>
+                    <section class="dishesSection">
+                        <h3 class="dishesSection__step">PLATS</h3>
+                        <div class="dishesSection__line"></div>
+                        <div class="menuContent">
+                            <div class="dishesInfos">
+                                <div class="dishesNames">
+                                    <h4 class="dishesNames__title">Filet de boeuf aux herbes</h4>
                                 </div> 
-                                <div class="dishes__descriptionPrice">  
-                                    <p class="dishes__subtitle">Accompagné de sa ribambelle de légumes</p>
-                                    <p class="dishes__price">40€</p>  
+                                <div class="dishesDetails">  
+                                    <p class="dishesDetails__subtitle">Accompagné de sa ribambelle de légumes</p>
+                                    <p class="dishesDetails__price">40€</p>  
                                 </div> 
                             </div>
-                            <div class="dishes__checkbox"><i class="fa-solid fa-circle-check"></i> </div>  
+                            <div class="checkbox"><i class="fa-solid fa-circle-check"></i> </div>  
                         </div>    
 
-                        <div class="dishes__container">
-                            <div class="dishes__txtAndPrice">
-                                <div class="dishes__txt">
-                                    <h4 class="dishes__title">Parmentier de queue de boeuf</h4>
+                        <div class="menuContent">
+                            <div class="dishesInfos">
+                                <div class="dishesNames">
+                                    <h4 class="dishesNames__title">Parmentier de queue de boeuf</h4>
                                 </div>
-                                <div class="dishes__descriptionPrice">
-                                    <p class="dishes__subtitle">A la truffe noire sur sa purée de panais</p>
-                                    <p class="dishes__price">35€</p> 
+                                <div class="dishesDetails">
+                                    <p class="dishesDetails__subtitle">A la truffe noire sur sa purée de panais</p>
+                                    <p class="dishesDetails__price">35€</p> 
                                 </div>
                             </div>
-                            <div class="dishes__checkbox"><i class="fa-solid fa-circle-check"></i> </div> 
+                            <div class="checkbox"><i class="fa-solid fa-circle-check"></i> </div> 
                         </div>   
 
-                        <div class="dishes__container">
-                            <div class="dishes__txtAndPrice">
-                                <div class="dishes__txt">
-                                    <h4 class="dishes__title">Filet de turbot</h4>
+                        <div class="menuContent">
+                            <div class="dishesInfos">
+                                <div class="dishesNames">
+                                    <h4 class="dishesNames__title">Filet de turbot</h4>
                                 </div>
-                                <div class="dishes__descriptionPrice">
-                                    <p class="dishes__subtitle">Aux agrumes</p>
-                                    <p class="dishes__price">44€</p> 
+                                <div class="dishesDetails">
+                                    <p class="dishesDetails__subtitle">Aux agrumes</p>
+                                    <p class="dishesDetails__price">44€</p> 
                                 </div>
                             </div>
-                            <div class="dishes__checkbox"><i class="fa-solid fa-circle-check"></i></div> 
+                            <div class="checkbox"><i class="fa-solid fa-circle-check"></i></div> 
                         </div>    
                     </section>
 
-                    <section class="dishes__section">
-                        <h3 class="dishes__step dishes__dessert">Desserts</h3>
-                        <div class="title__line"></div>
+                    <section class="dishesSection">
+                        <h3 class="dishesSection__step">DESSERTS</h3>
+                        <div class="dishesSection__line"></div>
 
-                        <div class="dishes__container">
-                            <div class="dishes__txtAndPrice">
-                                <div class="dishes__txt" >
-                                    <h4 class="dishes__title">Paris-Brest</h4>
+                        <div class="menuContent">
+                            <div class="dishesInfos">
+                                <div class="dishesNames" >
+                                    <h4 class="dishesNames__title">Paris-Brest</h4>
                                 </div>
-                                <div class="dishes__descriptionPrice">
-                                    <p class="dishes__subtitle">Revisité</p>
-                                    <p class="dishes__price">18€</p>
+                                <div class="dishesDetails">
+                                    <p class="dishesDetails__subtitle">Revisité</p>
+                                    <p class="dishesDetails__price">18€</p>
                                 </div>
                             </div>  
-                            <div class="dishes__checkbox"><i class="fa-solid fa-circle-check"></i></div> 
+                            <div class="checkbox"><i class="fa-solid fa-circle-check"></i></div> 
                         </div>
                        
 
-                        <div id="test" class="dishes__container">
-                            <div class="dishes__txtAndPrice">
-                                <div class="dishes__txt">
-                                    <h4 class="dishes__title">Macaron au chocolat d'exception</h4> 
+                        <div class="menuContent">
+                            <div class="dishesInfos">
+                                <div class="dishesNames">
+                                    <h4 class="dishesNames__title">Macaron au chocolat d'exception</h4> 
                                 </div>   
-                                <div class="dishes__descriptionPrice">
-                                    <p class="dishes__subtitle">Et glace à la vanille de Madagascar</p>
-                                    <p class="dishes__price">22€</p>   
+                                <div class="dishesDetails">
+                                    <p class="dishesDetails__subtitle">Et glace à la vanille de Madagascar</p>
+                                    <p class="dishesDetails__price">22€</p>   
                                 </div> 
                             </div>
-                            <div class="dishes__checkbox"><i class="fa-solid fa-circle-check"></i></div>
+                            <div class="checkbox"><i class="fa-solid fa-circle-check"></i></div>
                         </div>
 
-                        <div class="dishes__container">
-                            <div class="dishes__txtAndPrice">
-                                <div class="dishes__txt">
-                                    <h4 class="dishes__title">Mousse au chocolat</h4>
+                        <div class="menuContent">
+                            <div class="dishesInfos">
+                                <div class="dishesNames">
+                                    <h4 class="dishesNames__title">Mousse au chocolat</h4>
                                 </div>
-                                <div class="dishes__descriptionPrice">
-                                    <p class="dishes__subtitle">Au piment d'Espelette et à la truffe noire</p>
-                                    <p class="dishes__price">23€</p>
+                                <div class="dishesDetails">
+                                    <p class="dishesDetails__subtitle">Au piment d'Espelette et à la truffe noire</p>
+                                    <p class="dishesDetails__price">23€</p>
                                 </div>
                             </div>
-                            <div class="dishes__checkbox"><i class="fa-solid fa-circle-check"></i></div>
+                            <div class="checkbox"><i class="fa-solid fa-circle-check"></i></div>
                         </div>  
                     </section>
-
-                    <input class="btn-order" type="button" value="Commander"> 
-                </form>
+                    <button class="btn-order">Commander</button>
+                </div>
             </div>
         </main>
 
-        <footer>
-            <h4 class="footer__logo footer__logo--white">Ohmyfood</h4>
+        <footer class="footer">
+            <h4 class="footer__logo">Ohmyfood</h4>
             
-            <div class="footer__linkContainer">
-                <div class="footer__1stPart">
-                    <a class="footer__link" href="">
+            <div class="footerLinks">
+                <div class="linksContainer">
+                    <a class="linksContainer__link" href="">
                         <i class="fa-solid fa-utensils"></i>
                         <p>Proposer un restaurant</p>
                     </a>
             
-                    <a class="footer__link" href="#">
+                    <a class="linksContainer__link" href="#">
                         <i class="fa-solid fa-handshake-angle"></i>
                         <p>Devenir partenaire</p>
                     </a>
                 </div>
-                <div class="footer__2ndPart">
-                    <a class="footer__link"  href="#">Mentions légales</a>
-                    <a class="footer__link" href="mailto:sandrine94320@hotmail.fr">Contact</a>
+                <div class="linksContainer">
+                    <a class="linksContainer__link"  href="#">Mentions légales</a>
+                    <a class="linksContainer__link" href="mailto:sandrine94320@hotmail.fr">Contact</a>
                 </div>
             </div>
         </footer>
     </div>
-
-    
 </body>
+    
+
 </html>

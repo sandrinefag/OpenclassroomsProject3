@@ -1,0 +1,300 @@
+*{
+    @include settingGeneral;
+}
+
+body{
+    .body-container{
+      background-color: $light-grey-color;
+        
+      .header{
+        @include header;
+        &__arrow{
+          position: relative;
+          top: 17px;
+          left: 17px;
+          font-size: 25px;
+        }
+  
+        &__logo{
+          width: 60%;
+          font-size: 30px;
+          margin: auto;
+          text-align: center;
+          font-family: $logo-police;
+        }
+      }
+      .photoResto{
+        &__picture{
+          width: 100%;
+          height: 213px;
+          object-fit: cover;
+  
+          @media (min-width:768px) and (max-width:1024px){
+            height: 383px;
+          }
+  
+          @media (min-width:1025px){
+            height: 383px;
+          }
+        }
+      }
+  
+      .main__container{
+        position: relative;
+        margin-top: -50px;
+        border-radius: 40px 40px 0 0;
+        background-color: $light-grey-color;
+          
+        @media (min-width:768px) and (max-width:1024px){
+          margin:-5px 0 -90px 0;
+          background-color: $white-color;
+          position: inherit;
+        }
+  
+        @media (min-width:1025px){
+          margin-top: -5px;
+          background-color:$white-color;
+          margin-bottom: -90px;
+        }
+  
+          .menu__content{
+            @media (min-width:768px) and (max-width:1024px){
+              width: 80%;
+              background-color: $light-grey-color;
+              border-radius: 40px 40px 0 0;
+              padding: 10px 50px 5px 50px;
+              position: relative;
+              top: -90px;
+              margin: auto;
+            }
+  
+            @media (min-width:1025px){
+              width: 73%;
+              background-color: $light-grey-color;
+              border-radius: 40px 40px 0 0;
+              padding: 10px 50px 40px 50px;
+              position: relative;
+              top: -45px;
+              margin: auto;
+              margin-bottom: 10px;
+            }
+  
+            .menuHeader{
+              display: flex;
+              width: 90%;
+              padding: 30px 0 20px 5px;
+              align-items: center;
+              margin-left: 10px;
+  
+              @media (min-width:1025px){
+                width: 60%;
+                margin: auto;
+              }
+              
+              &__title{
+                font-size: 24px;
+                font-family: $logo-police;
+                font-weight: 400;
+                width: 83%;
+  
+                @media (min-width:768px) and (max-width:1024px){
+                  font-size: 26px;
+                  width: 100%;
+                  padding-left: 30px;
+                }
+              }
+  
+              .heartContainer{
+                position: relative;
+                left: 28px;
+  
+                @media (min-width:1025px){
+                  margin: 3px;
+                }
+                 
+                .heart__empty{
+                  @include favorite-effect; 
+                }
+                .heart__full{
+                  @include favorite-full;
+                  @media (min-width:768px) and (max-width:1024px){
+                    top: -25px;
+                    left: 0;
+                  }
+                }
+              }
+            }
+
+            .dishesContainer{
+              display: flex;
+              flex-direction: column;
+              gap: 40px;
+              padding-bottom: 30px;
+              
+              .dishesSection{
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                animation: apparear 5s forwards;
+                opacity: 0;
+                  
+                &:nth-child(1){
+                  animation-delay: 0s;
+                }
+                
+                &:nth-child(2){
+                  animation-delay:1s;
+                }
+                
+                &:nth-child(3){
+                  animation-delay: 2s;
+                }
+                
+                &__step{
+                  font-size: 18px;
+                  font-weight: 300;
+                  margin: 0 0 -6px 10px;
+                }
+  
+                &__line{
+                  border-bottom: $light-green-color solid 3px;
+                  width: 40px;
+                  margin-left: 10px;
+                }
+  
+                .menuContent{
+                  display: flex;
+                  padding: 0 10px 0 10px;
+                 
+                  .dishesInfos{
+                    background-color: $white-color;
+                    width: 100%;
+                    border-radius: 15px;
+                    height: 69px;
+                    line-height: 23px;
+                    padding: 11px;
+                    transition: width 0.2s ease;
+                    z-index: 1;
+                    box-shadow: $stepDishes-shadow;
+                      
+                    .dishesNames{
+                      width: 82%;
+                      display: flex;
+                      flex-direction: column;
+                      gap: 5px; 
+                          
+                      &__title{
+                        font-size: 14px;
+                        font-weight: 500;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        @media (min-width:768px) and (max-width:1024px){
+                          font-size: 18px;
+                        }
+                      }
+                    }
+  
+                    .dishesDetails{
+                      display: flex;
+                      justify-content: space-between;
+                
+                      &__subtitle{
+                        font-size: 13px;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+  
+                        @media (min-width:768px) and (max-width:1024px){
+                          font-size: 16px;
+                          font-weight: 300;
+                        }
+                      }
+  
+                      &__price{
+                        font-size: 14px;
+                        font-weight: 700;
+                        height: 19px;
+                      }            
+                    }
+                  
+                    &:hover{
+                      width: 83%;
+                      border-radius: 15px 0 0 15px;
+                      @media (min-width:768px) and (max-width:1024px){
+                        width: 85%;
+                      }
+  
+                      @media (min-width:1025px){
+                        width: 90%;
+                      }
+                    } 
+                  }
+                    
+                .checkbox{
+                    background-color: $light-green-color;
+                    width: 17%;
+                    border-radius: 0 20px 20px 0;
+                    height: 69px;
+                    z-index: 0;
+                    position: absolute;
+                    right: 10px;
+  
+                    @media (min-width:768px) and (max-width:1024px){
+                      position: absolute;
+                      right: 10%;
+                    }
+  
+                    @media (min-width:1025px){
+                      right: 8%; 
+                      margin-right: -23px; 
+                    }
+  
+                    .fa-circle-check::before{
+                      color: $white-color;
+                      position: absolute;
+                      right: 30%;
+                      top: 34%;
+                      font-size: 25px;
+                        
+                      @media (min-width:768px) and (max-width:1024px){
+                        font-size: 25px;
+                        top: 34%;
+                      }
+  
+                      @media (min-width:1025px){
+                        right: 14%;
+                      }
+  
+                    }
+                  }
+                
+                }
+              }
+                .btn-order{
+                  @include btn;
+                  width: 49%;
+                  margin: auto;
+                  border: none;
+  
+                  &:hover{
+                    @include btn-effect;   
+                  }
+  
+                  @media (min-width:1025px){
+                    font-size: 16px;
+                    width: 30%;
+                  }
+              
+                }
+              
+            }
+          }
+        }
+  
+        .footer{
+            @include footer;
+            
+        }
+    }  
+}        

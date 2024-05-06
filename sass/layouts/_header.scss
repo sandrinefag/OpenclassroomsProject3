@@ -1,0 +1,15 @@
+@mixin header{
+      display: flex;
+      justify-content: center;
+      margin-bottom: 3px;
+      height: 63px;
+      box-shadow: $header-shadow;
+   
+      &__logo{
+        width: 60%;
+        font-size: 30px;
+        margin: auto;
+        text-align: center;
+        font-family: $logo-police;  
+      } 
+}

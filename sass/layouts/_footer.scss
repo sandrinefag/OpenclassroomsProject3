@@ -1,0 +1,76 @@
+/****footer***/
+@mixin footer{
+    background-color: #353535;
+    font-size: 14px;
+    padding: 22px 25px;
+
+    @media (min-width:768px) and (max-width:1024px){
+      @include footFlexRowEnd;
+      height: 114px;
+    }
+
+    @media (min-width:1025px){
+      @include footFlexRowEnd;
+      gap: 60px;
+      height: 114px;
+      position: relative;
+      z-index: 0;
+    }
+
+    &__logo{
+      font-family: $logo-police;
+      color: #ffffff;
+      font-weight:500;
+      padding-bottom: 10px;
+      font-size: 18px;
+
+       @media (min-width:768px) and (max-width:1024px){
+          padding-bottom: 0;
+        }
+
+        @media (min-width:1025px){
+          padding: 0;
+        }
+    }
+
+    .footerLinks{
+      line-height: 30px;
+
+      @media (min-width:768px) and (max-width:1024px){
+        @include linksfooter;
+        width: 73%;
+      }
+
+      @media (min-width:1025px){
+        display: flex;
+        gap: 50px;
+      }
+
+      .linksContainer{
+        @media (min-width:768px) and (max-width:1024px){
+          @include linksfooter;
+        }
+      
+        @media (min-width:1025px){
+          @include linksfooter;
+        }
+     
+        &__link{
+          @include linksfooter;
+          align-items: center;
+          color: #ffffff;
+          font-size: 15px;
+
+          @media (min-width:768px) and (max-width:1024px){
+            font-size: 14px;
+            gap: 7px;
+          }
+
+          @media (min-width:1025px){
+            gap: 10px;
+          }
+        }  
+      }
+    }  
+  }
+

@@ -1,0 +1,26 @@
+/****loader animation***/
+
+$anim-dur: 3s;
+$num-points: 3;
+$anim-delay: $anim-dur / $num-points;
+
+/**********shadow ensemble du site*********************/
+$btn-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+$header-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+$aside-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25) ;
+$stepDishes-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+
+/***********polices ensemble du site***************/
+$logo-police: "shrikhand", sans-serif;
+
+/*************colors ensemble du site***************/
+$purple-color:#9356DC;
+$dark-green-color:#008766;
+$light-green-color:#99E2D0;
+$white-color:#ffffff;
+$light-grey-color:#f6f6f6;
+$grey-color:#EAEAEA;
+$black-color:#353535;
+$pink-color:#FF79DA;
+$gradient-color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%); 
+
