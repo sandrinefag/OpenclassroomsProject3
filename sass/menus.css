@@ -213,6 +213,12 @@ body .body-container .main__container .menu__content .menuHeader .heartContainer
   left: -26px;
   transform: scale(0.1);
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .body-container .main__container .menu__content .menuHeader .heartContainer .heart__full {
+    top: -25px;
+    left: 0;
+  }
+}
 body .body-container .main__container .menu__content .dishesContainer {
   display: flex;
   flex-direction: column;

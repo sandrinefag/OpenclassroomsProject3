@@ -68,12 +68,23 @@ body .loader-container {
   justify-content: center;
   align-items: center;
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .loader-container {
+    width: 100%;
+    display: flex;
+  }
+}
 body .loader-container .loader {
   display: flex;
   flex-direction: column;
   overflow: hidden;
   justify-content: center;
   height: 100vh;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .loader-container .loader {
+    width: 76%;
+  }
 }
 body .loader-container .loader__txt {
   font-size: 14px;
