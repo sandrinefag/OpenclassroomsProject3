@@ -8,6 +8,14 @@
       visibility: hidden;
     }
   } 
+@-moz-keyframes disappear{
+    0%{
+      visibility: visible;
+    }
+    100%{
+      visibility: hidden;
+    }
+  } 
 
 /** points du loader qui grossit et degrossit**/
   @keyframes points {
@@ -28,8 +36,34 @@
     }
    }
 
+  @-moz-keyframes points {
+    0% {
+      transform: scale(0);
+    }
+    25%{
+      transform: scale(0.4);
+    }
+    50%{
+      transform: scale(0.8);
+    }
+    75%{
+        transform: scale(1);
+     }
+    100%{
+      transform: scale(0);
+    }
+   }
+
   /********menu apparait en decalé*****/
    @keyframes apparear{
+    from{
+      opacity:0;
+    }
+    to{
+      opacity: 1;
+    }
+  }
+   @-moz-keyframes apparear{
     from{
       opacity:0;
     }

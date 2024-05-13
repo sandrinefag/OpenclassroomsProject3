@@ -117,10 +117,10 @@ body{
                 }
                 .heart__full{
                   @include favorite-full;
-                  @media (min-width:768px) and (max-width:1024px){
-                    top: -25px;
-                    left: 0;
-                  }
+                  // @media (min-width:768px) and (max-width:1024px){
+                  //   top: -25px;
+                  //   left: 0;
+                  // }
                 }
               }
             }
@@ -136,18 +136,27 @@ body{
                 flex-direction: column;
                 gap: 12px;
                 animation: apparear 5s forwards;
+                -moz-animation:apparear 5s forwards ;
+                -webkit-animation:apparear 5s forwards ;
                 opacity: 0;
                   
                 &:nth-child(1){
                   animation-delay: 0s;
+                  -moz-animation-delay: 0s;
+                  -webkit-animation-delay: 0s;
                 }
                 
                 &:nth-child(2){
                   animation-delay:1s;
+                  -moz-animation-delay:1s;
+                  -webkit-animation-delay:1s;
                 }
                 
                 &:nth-child(3){
                   animation-delay: 2s;
+                  -moz-animation-delay: 2s;
+                  -webkit-animation-delay: 2s;
+                  
                 }
                 
                 &__step{
@@ -174,6 +183,8 @@ body{
                     line-height: 23px;
                     padding: 11px;
                     transition: width 0.2s ease;
+                    -moz-transition: width 0.2s ease;
+                    -webkit-transition: width 0.2s ease;
                     z-index: 1;
                     box-shadow: $stepDishes-shadow;
                       
@@ -226,7 +237,7 @@ body{
                       }
   
                       @media (min-width:1025px){
-                        width: 90%;
+                        width: 91%;
                       }
                     } 
                   }
@@ -241,13 +252,13 @@ body{
                     right: 10px;
   
                     @media (min-width:768px) and (max-width:1024px){
-                      position: absolute;
+
                       right: 10%;
                     }
   
                     @media (min-width:1025px){
-                      right: 8%; 
-                      margin-right: -23px; 
+                      right: 60px; 
+                      
                     }
   
                     .fa-circle-check::before{
@@ -255,15 +266,16 @@ body{
                       position: absolute;
                       right: 30%;
                       top: 34%;
-                      font-size: 25px;
+                      font-size: 26px;
                         
                       @media (min-width:768px) and (max-width:1024px){
-                        font-size: 25px;
-                        top: 34%;
+                        left: 50%;
+                        top: 31%;
                       }
   
                       @media (min-width:1025px){
                         right: 14%;
+                        font-size: 28px;
                       }
   
                     }

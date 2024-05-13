@@ -20,7 +20,11 @@
  -webkit-text-fill-color: transparent;
  -moz-text-fill-color:transparent;
  transition-property: transform 4.5s;
+ -moz-transition-property: transform 4.5s;
+ -webkit-transition-property: transform 4.5s;
  transition-duration: 1000ms;
+ -moz-transition-duration: 1000ms;
+ -webkit-transition-duration: 1000ms;
  filter: opacity(0);
  position: relative;
  left: -26px;
@@ -32,74 +36,19 @@
         filter: opacity(100);
         transform: scale(1);
     }   
+    @media (min-width:768px) and (max-width:1024px){
+      &:active + .heart__full{
+        filter: opacity(100);
+        transform: scale(1);
+      }
+    }
+    @media (min-width:1025px){
+      &:hover + .heart__full{
+        filter: opacity(100);
+        transform: scale(1);
+      }
+    }  
   }
-
-/****loader animation*******/
-//  @mixin loaderIndex{
-//   // @include flexColumn;
-//   // justify-content: center;
-//   // align-items: center;
-//   // background-color: #ffffff;
-//   // height: 100vh;
-//   // position: absolute;
-//   // inset: 0 0 0 0;
-//   // z-index: 1;
-//   // opacity: 0.9;
-//   // height: 100vh;
-//   // gap: 20px;
-  //  animation: disappear 3.5s forwards;
-
-  // &__txt{
-  //   font-size: 13px;
-  //   background-color:  #9356DC;
-  //   -webkit-background-clip: text;
-  //   background-clip: text;
-  //   -webkit-text-fill-color: transparent;
-
-  //     @media (min-width:768px) and (max-width:1024px){
-  //       font-size: 20px;
-  //     }
-
-  //     @media (min-width:1025px){
-  //       font-size: 25px;
-  //     }
-  // }
-
-  // &__animation{ 
-  //   width: 90%;
-  //   display: flex;
-  //   justify-content: center;
-  //   gap: 20px;
-  //   position: relative;
-  //   height: 4%;
-  
-  //   @media (min-width:768px) and (max-width:1024px){
-  //     width: 70%;
-  //   }   
-
-  //   @media (min-width:1025px){
-  //     width: 33%;
-  //   }
-    
-    // @for $i from 1 through $num-points {
-    //   &--point:nth-child(#{$i}) {
-    //   width: 8%;
-    //   border-radius: 25px;
-    //   animation: points $anim-dur 3;
-    //   // animation-iteration-count:3;
-    //   animation-delay: $anim-delay * $i;
-    //   } 
-    //     &--green{
-    //         background-color: #99E2D0;
-    //     }
-    //     &--pink{
-    //       background-color: #FF79DA;
-    //     }
-    //     &--purple{
-    //       background-color: #9356DC;
-    //     }
-    // }
-  // }
 
  
 /****************************buttons(ensemble du site)***********************************/
@@ -109,6 +58,7 @@
   font-size: 16.5px;
 
 }
+
 
 @mixin btn{
   text-align: center;
@@ -122,6 +72,8 @@
   // transition: font-size 0.8s;
   // transition-delay: 100ms;
   transition: font-size 0.8s 100ms;
+  -moz-transition: font-size 0.8s 100ms;
+  -webkit-transition: font-size 0.8s 100ms;
 }
 
 /**********************************************index agencement flex**********************/
@@ -151,4 +103,3 @@
 
 
 
-/*********************************base-menu***********************************************/

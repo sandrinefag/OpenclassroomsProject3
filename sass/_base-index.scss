@@ -1,84 +1,99 @@
 *{
   @include settingGeneral;
-    // font-family: "Roboto", sans-serif;
-    // box-sizing: border-box;
-    // margin: 0;
-    // text-decoration: none;
-
-    // a{
-    //   color: inherit;
-    // }
-
 }
 
 body{
   
   .loader-container{
-    position: fixed;
+    position: absolute;
     inset: 0 0 0 0;
     z-index: 1;
     background-color: $white-color;
     opacity: 0.9;
     animation: disappear 3.5s forwards; 
+    -moz-animation: disappear 3.5s forwards; 
+    -webkit-animation: disappear 3.5s forwards; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-width:768px) and (max-width:1024px){
+      width: 100%;
+      display: flex;
+
+    }
+   
+    
 
     .loader{
       @include flexColumn;
       overflow: hidden;
       justify-content: center;
-      // align-items: center;
-      // background-color: $white-color;
       height: 100vh;
-     
-      // position: fixed;
-      // width: 80%;
-      // inset: 0 0 0 0;
-      // z-index: 1;
-      // opacity: 0.9;
-      // gap: 20px; 
-    
+      @media (min-width:768px) and (max-width:1024px){
+        width: 76%;
+      }
+      
 
       &__txt{
-        font-size: 16px;
+        font-size: 14px;
         background-color: $purple-color;
         -webkit-background-clip: text;
+        -moz-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
-        margin-left: 5%;
+        -moz-text-fill-color: transparent;
+     
 
         @media (min-width:768px) and (max-width:1024px){
-          font-size: 20px;
+          font-size: 25px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+         
         }
 
         @media (min-width:1025px){
           font-size: 25px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          
         }
       }
 
       &__animation{ 
-        width: 90%;
+        width:100%;
         display: flex;
         justify-content: center;
         gap: 20px;
-        position: relative;
-        height: 5%;
-        right: 19%;
-        top: 20px;
+        height: 3%;
         
+     
         @media (min-width:768px) and (max-width:1024px){
-          width: 70%;
+          border-radius: 90%;
+          // height: 25px;
+          height: 3%;
+         
         }   
 
         @media (min-width:1025px){
-          width: 33%;
+            height: 3%;
+            
         }
 
         @for $i from 1 through $num-points {
           &--point:nth-child(#{$i}) {
-            width: 6%;
-            border-radius: 25px;
+            width: 7%;
+            border-radius: 50%;
             animation: points $anim-dur 3;
+            -moz-animation: points $anim-dur 3;
+            -webkit-animation: points $anim-dur 3;
             // animation-iteration-count:3;
             animation-delay: $anim-delay * $i;
+            -moz-animation-delay: $anim-delay * $i;
+            -webkit-animation-delay: $anim-delay * $i;
           } 
             &--green{
                 background-color:$light-green-color;

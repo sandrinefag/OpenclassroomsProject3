@@ -5,11 +5,9 @@
 /*************colors ensemble du site***************/
 /************************parametrage ensemble du site******************************************/
 /****************************************hearts animation (ensemble du site)********************************************/
-/****loader animation*******/
 /****************************buttons(ensemble du site)***********************************/
 /**********************************************index agencement flex**********************/
 /********************************************footer agencement (ensemble du site)*****************************/
-/*********************************base-menu***********************************************/
 /**loader qui disparait a la fin du chargement de la page**/
 @keyframes disappear {
   0% {
@@ -58,12 +56,17 @@
 }
 
 body .loader-container {
-  position: fixed;
+  position: absolute;
   inset: 0 0 0 0;
   z-index: 1;
   background-color: #ffffff;
   opacity: 0.9;
   animation: disappear 3.5s forwards;
+  -moz-animation: disappear 3.5s forwards;
+  -webkit-animation: disappear 3.5s forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 body .loader-container .loader {
   display: flex;
@@ -73,48 +76,58 @@ body .loader-container .loader {
   height: 100vh;
 }
 body .loader-container .loader__txt {
-  font-size: 16px;
+  font-size: 14px;
   background-color: #9356DC;
   -webkit-background-clip: text;
+  -moz-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-left: 5%;
+  -moz-text-fill-color: transparent;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   body .loader-container .loader__txt {
-    font-size: 20px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
 }
 @media (min-width: 1025px) {
   body .loader-container .loader__txt {
     font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 body .loader-container .loader__animation {
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: center;
   gap: 20px;
-  position: relative;
-  height: 5%;
-  right: 19%;
-  top: 20px;
+  height: 3%;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   body .loader-container .loader__animation {
-    width: 70%;
+    border-radius: 90%;
+    height: 3%;
   }
 }
 @media (min-width: 1025px) {
   body .loader-container .loader__animation {
-    width: 33%;
+    height: 3%;
   }
 }
 body .loader-container .loader__animation--point:nth-child(1) {
-  width: 6%;
-  border-radius: 25px;
+  width: 7%;
+  border-radius: 50%;
   animation: points 3s 3;
+  -moz-animation: points 3s 3;
+  -webkit-animation: points 3s 3;
   animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -webkit-animation-delay: 1s;
 }
 body .loader-container .loader__animation--green {
   background-color: #99E2D0;
@@ -126,10 +139,14 @@ body .loader-container .loader__animation--purple {
   background-color: #9356DC;
 }
 body .loader-container .loader__animation--point:nth-child(2) {
-  width: 6%;
-  border-radius: 25px;
+  width: 7%;
+  border-radius: 50%;
   animation: points 3s 3;
+  -moz-animation: points 3s 3;
+  -webkit-animation: points 3s 3;
   animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  -webkit-animation-delay: 2s;
 }
 body .loader-container .loader__animation--green {
   background-color: #99E2D0;
@@ -141,10 +158,14 @@ body .loader-container .loader__animation--purple {
   background-color: #9356DC;
 }
 body .loader-container .loader__animation--point:nth-child(3) {
-  width: 6%;
-  border-radius: 25px;
+  width: 7%;
+  border-radius: 50%;
   animation: points 3s 3;
+  -moz-animation: points 3s 3;
+  -webkit-animation: points 3s 3;
   animation-delay: 3s;
+  -moz-animation-delay: 3s;
+  -webkit-animation-delay: 3s;
 }
 body .loader-container .loader__animation--green {
   background-color: #99E2D0;
@@ -251,6 +272,8 @@ body aside .presentation__link {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
   transition: font-size 0.8s 100ms;
+  -moz-transition: font-size 0.8s 100ms;
+  -webkit-transition: font-size 0.8s 100ms;
 }
 body aside .presentation__link:hover {
   opacity: 0.85;
@@ -489,6 +512,18 @@ body .restoSection__container .restoCards .heart .heart__empty:hover + .heart__f
   filter: opacity(100);
   transform: scale(1);
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .restoSection__container .restoCards .heart .heart__empty:active + .heart__full {
+    filter: opacity(100);
+    transform: scale(1);
+  }
+}
+@media (min-width: 1025px) {
+  body .restoSection__container .restoCards .heart .heart__empty:hover + .heart__full {
+    filter: opacity(100);
+    transform: scale(1);
+  }
+}
 body .restoSection__container .restoCards .heart .heart__full {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   -webkit-background-clip: text;
@@ -497,7 +532,11 @@ body .restoSection__container .restoCards .heart .heart__full {
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
   transition-property: transform 4.5s;
+  -moz-transition-property: transform 4.5s;
+  -webkit-transition-property: transform 4.5s;
   transition-duration: 1000ms;
+  -moz-transition-duration: 1000ms;
+  -webkit-transition-duration: 1000ms;
   filter: opacity(0);
   position: relative;
   left: -26px;
@@ -591,12 +630,4 @@ body .footer .footerLinks .linksContainer__link {
   }
 }
 
-/**************General************/
-/*************btn*******************/
-/********heart-favorite**********/
-/*flex**/
-/**mixin footer**/
-/***loader animation**/
-/*****flex column****/
-/*********/
 /*# sourceMappingURL=style.css.map */
