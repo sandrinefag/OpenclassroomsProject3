@@ -12,7 +12,6 @@ body{
     opacity: 0.9;
     animation: disappear 3.5s forwards; 
     -moz-animation: disappear 3.5s forwards; 
-    -webkit-animation: disappear 3.5s forwards; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,10 +19,7 @@ body{
     @media (min-width:768px) and (max-width:1024px){
       width: 100%;
       display: flex;
-
     }
-   
-    
 
     .loader{
       @include flexColumn;
@@ -37,29 +33,17 @@ body{
 
       &__txt{
         font-size: 14px;
-        background-color: $purple-color;
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        -moz-text-fill-color: transparent;
-     
+        color: $purple-color;
 
         @media (min-width:768px) and (max-width:1024px){
           font-size: 25px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
           width: 100%;
-         
+          @include flexDoubleCenter;
         }
 
         @media (min-width:1025px){
           font-size: 25px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          
+          @include flexDoubleCenter; 
         }
       }
 
@@ -70,30 +54,23 @@ body{
         gap: 20px;
         height: 3%;
         
-     
         @media (min-width:768px) and (max-width:1024px){
           border-radius: 90%;
-          // height: 25px;
           height: 3%;
-         
         }   
 
         @media (min-width:1025px){
-            height: 3%;
-            
+            height: 3%;   
         }
 
         @for $i from 1 through $num-points {
           &--point:nth-child(#{$i}) {
             width: 7%;
             border-radius: 50%;
-            animation: points $anim-dur 3;
-            -moz-animation: points $anim-dur 3;
-            -webkit-animation: points $anim-dur 3;
-            // animation-iteration-count:3;
+            animation: points $anim-dur;
+            -moz-animation: points $anim-dur;
             animation-delay: $anim-delay * $i;
             -moz-animation-delay: $anim-delay * $i;
-            -webkit-animation-delay: $anim-delay * $i;
           } 
             &--green{
                 background-color:$light-green-color;
