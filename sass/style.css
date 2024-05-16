@@ -116,7 +116,7 @@ body .loader-container .loader__animation {
 @media (min-width: 768px) and (max-width: 1024px) {
   body .loader-container .loader__animation {
     border-radius: 90%;
-    height: 3%;
+    height: 4%;
   }
 }
 @media (min-width: 1025px) {
