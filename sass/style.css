@@ -56,27 +56,28 @@
 }
 
 body .loader-container {
-  position: absolute;
-  inset: 0 0 0 0;
-  z-index: 1;
+  position: fixed;
+  inset: 0 42% 0 0;
+  z-index: 9999;
   background-color: #ffffff;
   opacity: 0.9;
-  animation: disappear 3.5s forwards;
-  -moz-animation: disappear 3.5s forwards;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   body .loader-container {
+    width: 74vh;
+  }
+}
+@media (min-width: 1025px) {
+  body .loader-container {
     width: 100%;
-    display: flex;
   }
 }
 body .loader-container .loader {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   justify-content: center;
   height: 100vh;
 }
