@@ -10,8 +10,8 @@ body{
     z-index: 9999;
     background-color: $white-color;
     opacity: 0.9;
-    // animation: disappear 3.5s forwards; 
-    // -moz-animation: disappear 3s forwards; 
+    animation: disappear 3.5s forwards; 
+    -moz-animation: disappear 3s forwards; 
     display: flex;
     justify-content: center;
     align-items: center;
