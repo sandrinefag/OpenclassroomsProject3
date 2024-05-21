@@ -187,8 +187,10 @@ body .body-container .main__container .menu__content .menuHeader .heartContainer
   transition-duration: 1s;
   filter: opacity(0);
   position: relative;
-  left: -26px;
+  top: -25px;
   transform: scale(0);
+  right: 26px;
+  top: 0;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   body .body-container .main__container .menu__content .menuHeader .heartContainer .heart__full {
